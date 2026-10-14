@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ZMP">
+    <Package name="main">
+        <Key ID="STR_ZMP_AddFavorite">
+            <Original>★ 收藏</Original>
+            <English>★ Favorite</English>
+            <Chinesesimp>★ 收藏</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_AddGroup">
+            <Original>添加分组</Original>
+            <English>Add group</English>
+            <Chinesesimp>添加分组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_All">
+            <Original>全部</Original>
+            <English>All</English>
+            <Chinesesimp>全部</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_AllGroups">
+            <Original>全部分组</Original>
+            <English>All groups</English>
+            <Chinesesimp>全部分组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Close">
+            <Original>关闭</Original>
+            <English>Close</English>
+            <Chinesesimp>关闭</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_ColDuration">
+            <Original>时长</Original>
+            <English>Length</English>
+            <Chinesesimp>时长</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_ColName">
+            <Original>名称</Original>
+            <English>Name</English>
+            <Chinesesimp>名称</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_ContextMenu">
+            <Original>音乐播放器</Original>
+            <English>Music Player</English>
+            <Chinesesimp>音乐播放器</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_CountFormat">
+            <Original>曲库 %1 首 · 当前显示 %2 首 · 已收藏 %3 首</Original>
+            <English>Library: %1 · Shown: %2 · Favorites: %3</English>
+            <Chinesesimp>曲库 %1 首 · 当前显示 %2 首 · 已收藏 %3 首</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_DeleteGroup">
+            <Original>删除分组</Original>
+            <English>Delete group</English>
+            <Chinesesimp>删除分组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_DeleteGroupTooltip">
+            <Original>删除上方「分组」筛选框中选中的分组，组内曲目移到「未分组」</Original>
+            <English>Deletes the group selected in the group filter above. Its tracks become ungrouped.</English>
+            <Chinesesimp>删除上方「分组」筛选框中选中的分组，组内曲目移到「未分组」</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeApply">
+            <Original>淡变到目标音量</Original>
+            <English>Fade to volume</English>
+            <Chinesesimp>淡变到目标音量</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeApplyTooltip">
+            <Original>[时长, 音量] remoteExec ["fadeMusic", 0]</Original>
+            <English>[time, volume] remoteExec ["fadeMusic", 0]</English>
+            <Chinesesimp>[时长, 音量] remoteExec ["fadeMusic", 0]</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeInPlay">
+            <Original>淡入播放(全队)</Original>
+            <English>Fade in (all)</English>
+            <Chinesesimp>淡入播放(全队)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeInPlayTooltip">
+            <Original>全队：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Original>
+            <English>All players: volume to 0 -&gt; play -&gt; fade to the target volume over the fade time</English>
+            <Chinesesimp>全队：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeOutStop">
+            <Original>淡出停止(全队)</Original>
+            <English>Fade out (all)</English>
+            <Chinesesimp>淡出停止(全队)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeOutStopTooltip">
+            <Original>全队在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Original>
+            <English>All players fade to 0 over the fade time, then music stops and volume is restored to the target volume</English>
+            <Chinesesimp>全队在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeTime">
+            <Original>淡变时长(秒)</Original>
+            <English>Fade time (s)</English>
+            <Chinesesimp>淡变时长(秒)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FadeTimeTooltip">
+            <Original>淡入 / 淡出 / 淡变的时长，单位秒（0 - 600）</Original>
+            <English>Duration of fade in / fade out / volume fade, in seconds (0 - 600)</English>
+            <Chinesesimp>淡入 / 淡出 / 淡变的时长，单位秒（0 - 600）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_FilterGroupTooltip">
+            <Original>只在「收藏」页签可用。选中某个分组后可点「删除分组」</Original>
+            <English>Favorites tab only. Pick a group here, then click "Delete group" to remove it.</English>
+            <Chinesesimp>只在「收藏」页签可用。选中某个分组后可点「删除分组」</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Group">
+            <Original>分组</Original>
+            <English>Group</English>
+            <Chinesesimp>分组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_GroupAmbient">
+            <Original>氛围</Original>
+            <English>Ambient</English>
+            <Chinesesimp>氛围</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_GroupCombat">
+            <Original>战斗</Original>
+            <English>Combat</English>
+            <Chinesesimp>战斗</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_GroupEnding">
+            <Original>结尾</Original>
+            <English>Ending</English>
+            <Chinesesimp>结尾</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_GroupStealth">
+            <Original>潜入</Original>
+            <English>Stealth</English>
+            <Chinesesimp>潜入</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_GroupTooltip">
+            <Original>已收藏曲目：选择后立即修改分组；未收藏曲目：点「收藏」时放入该分组</Original>
+            <English>Favorited track: changes its group immediately. Not favorited: used when you click "Favorite".</English>
+            <Chinesesimp>已收藏曲目：选择后立即修改分组；未收藏曲目：点「收藏」时放入该分组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_HintMusicVolume">
+            <Original>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。「全队」包括你自己；试听只在你本机播放。</Original>
+            <English>&lt;t color='#ffcc66'&gt;Note:&lt;/t&gt; playMusic is affected by each player's own Options → Audio → Music volume; players with music volume 0 hear nothing. "All" includes you; preview is local only.</English>
+            <Chinesesimp>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。「全队」包括你自己；试听只在你本机播放。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_InfoFormat">
+            <Original>选中：%1  [%2]  来源：%3</Original>
+            <English>Selected: %1  [%2]  from: %3</English>
+            <Chinesesimp>选中：%1  [%2]  来源：%3</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_InfoNotLoaded">
+            <Original>%1：当前服务器未加载该曲目所在的模组</Original>
+            <English>%1: the mod containing this track is not loaded here</English>
+            <Chinesesimp>%1：当前服务器未加载该曲目所在的模组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_KeybindOpen">
+            <Original>打开音乐播放器</Original>
+            <English>Open Music Player</English>
+            <Chinesesimp>打开音乐播放器</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_KeybindOpenTooltip">
+            <Original>仅当你是 Zeus（curator）时有效</Original>
+            <English>Only works while you are a Zeus (curator)</English>
+            <Chinesesimp>仅当你是 Zeus（curator）时有效</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_ModuleCategory">
+            <Original>音乐</Original>
+            <English>Music</English>
+            <Chinesesimp>音乐</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_ModuleName">
+            <Original>音乐播放器</Original>
+            <English>Music Player</English>
+            <Chinesesimp>音乐播放器</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NewGroupTooltip">
+            <Original>输入新分组名，然后点「添加分组」</Original>
+            <English>Type a new group name, then click "Add group".</English>
+            <Chinesesimp>输入新分组名，然后点「添加分组」</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NoSelection">
+            <Original>未选择曲目</Original>
+            <English>No track selected</English>
+            <Chinesesimp>未选择曲目</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NotCurator">
+            <Original>[Zeus 音乐播放器] 只有 Zeus（curator）才能打开音乐播放器。</Original>
+            <English>[Zeus Music Player] Only a Zeus (curator) can open the music player.</English>
+            <Chinesesimp>[Zeus 音乐播放器] 只有 Zeus（curator）才能打开音乐播放器。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NotLoaded">
+            <Original>（未加载）</Original>
+            <English>(not loaded)</English>
+            <Chinesesimp>（未加载）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Note">
+            <Original>备注</Original>
+            <English>Note</English>
+            <Chinesesimp>备注</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NoteTooltip">
+            <Original>曲目备注名，回车或点「保存备注」保存（未收藏的曲目会自动加入收藏）</Original>
+            <English>Custom note / alias. Press Enter or "Save note" (adds the track to favorites if needed).</English>
+            <Chinesesimp>曲目备注名，回车或点「保存备注」保存（未收藏的曲目会自动加入收藏）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NowPlayingFormat">
+            <Original>正在播放：%1  [%2]  ·  %3  ·  %4 / %5</Original>
+            <English>Now playing: %1  [%2]  ·  %3  ·  %4 / %5</English>
+            <Chinesesimp>正在播放：%1  [%2]  ·  %3  ·  %4 / %5</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NowPlayingNone">
+            <Original>正在播放：（无）</Original>
+            <English>Now playing: (nothing)</English>
+            <Chinesesimp>正在播放：（无）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_PlayAll">
+            <Original>全队播放</Original>
+            <English>Play for all</English>
+            <Chinesesimp>全队播放</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_PlayAllTooltip">
+            <Original>[类名] remoteExec ["playMusic", 0]：所有玩家（包括你）播放。播放前会把全队音量设为「目标音量」。</Original>
+            <English>[class] remoteExec ["playMusic", 0]: everyone (including you) plays it. Music volume is first set to the target volume.</English>
+            <Chinesesimp>[类名] remoteExec ["playMusic", 0]：所有玩家（包括你）播放。播放前会把全队音量设为「目标音量」。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Preview">
+            <Original>试听</Original>
+            <English>Preview</English>
+            <Chinesesimp>试听</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_PreviewStop">
+            <Original>停止试听</Original>
+            <English>Stop preview</English>
+            <Chinesesimp>停止试听</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_PreviewTooltip">
+            <Original>只在你本机 playMusic，其他玩家听不到（双击列表也可试听）。会暂时替换你本机正在听的全队音乐。</Original>
+            <English>Plays only on your machine (local playMusic); nobody else hears it. Double-click a row to preview too. Replaces the music you currently hear.</English>
+            <Chinesesimp>只在你本机 playMusic，其他玩家听不到（双击列表也可试听）。会暂时替换你本机正在听的全队音乐。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckAllowed">
+            <Original>远程执行自检通过：%1 中 Commands mode = %2（允许远程命令）</Original>
+            <English>RemoteExec check OK: %1 Commands mode = %2 (commands allowed)</English>
+            <Chinesesimp>远程执行自检通过：%1 中 Commands mode = %2（允许远程命令）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckBlocked">
+            <Original>【警告】全队播放可能被服务器拦截！%1 中 Commands mode = 0（禁止所有远程命令）</Original>
+            <English>[WARNING] Playing for all may be blocked by the server! %1 Commands mode = 0 (all remote commands blocked)</English>
+            <Chinesesimp>【警告】全队播放可能被服务器拦截！%1 中 Commands mode = 0（禁止所有远程命令）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckLimits">
+            <Original>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，请让服务器管理员把 playMusic / fadeMusic 加入 CfgRemoteExec &gt;&gt; Commands 白名单。</Original>
+            <English>Only configs visible on your machine can be checked (mission description.ext and locally loaded mods).\nServer-only mods and BattlEye remoteexec.txt filters cannot be detected.\nIf nobody hears the music, ask the server admin to whitelist playMusic / fadeMusic in CfgRemoteExec &gt;&gt; Commands.</English>
+            <Chinesesimp>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，请让服务器管理员把 playMusic / fadeMusic 加入 CfgRemoteExec &gt;&gt; Commands 白名单。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckNotDefined">
+            <Original>远程执行自检通过：未定义 CfgRemoteExec（默认允许），全队播放可用</Original>
+            <English>RemoteExec check OK: no CfgRemoteExec defined (allowed by default)</English>
+            <Chinesesimp>远程执行自检通过：未定义 CfgRemoteExec（默认允许），全队播放可用</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckWarnShort">
+            <Original>注意：全队播放可能被服务器拦截</Original>
+            <English>Warning: playing for all may be blocked</English>
+            <Chinesesimp>注意：全队播放可能被服务器拦截</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckWhitelistMissing">
+            <Original>【警告】全队播放可能被服务器拦截！%1 为白名单模式 (mode = 1)，缺少：%2</Original>
+            <English>[WARNING] Playing for all may be blocked by the server! %1 is in whitelist mode (mode = 1) and is missing: %2</English>
+            <Chinesesimp>【警告】全队播放可能被服务器拦截！%1 为白名单模式 (mode = 1)，缺少：%2</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckWhitelistOk">
+            <Original>远程执行自检通过：%1 为白名单模式，已包含 playMusic / fadeMusic</Original>
+            <English>RemoteExec check OK: %1 is in whitelist mode and contains playMusic / fadeMusic</English>
+            <Chinesesimp>远程执行自检通过：%1 为白名单模式，已包含 playMusic / fadeMusic</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RemoveFavorite">
+            <Original>取消收藏</Original>
+            <English>Unfavorite</English>
+            <Chinesesimp>取消收藏</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SaveNote">
+            <Original>保存备注</Original>
+            <English>Save note</English>
+            <Chinesesimp>保存备注</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Search">
+            <Original>搜索</Original>
+            <English>Search</English>
+            <Chinesesimp>搜索</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SearchTooltip">
+            <Original>按名称 / 类名 / musicClass / 来源模组 / 分组 / 备注搜索，空格分隔多个关键字</Original>
+            <English>Search by name / class / musicClass / source mod / group / note. Separate keywords with spaces.</English>
+            <Chinesesimp>按名称 / 类名 / musicClass / 来源模组 / 分组 / 备注搜索，空格分隔多个关键字</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SelectFirst">
+            <Original>请先在列表中选择一首曲目</Original>
+            <English>Select a track in the list first</English>
+            <Chinesesimp>请先在列表中选择一首曲目</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SourceGlobal">
+            <Original>全队</Original>
+            <English>all players</English>
+            <Chinesesimp>全队</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SourceOther">
+            <Original>其他来源（任务脚本 / 其他 Zeus）</Original>
+            <English>other source (mission script / another Zeus)</English>
+            <Chinesesimp>其他来源（任务脚本 / 其他 Zeus）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SourcePreview">
+            <Original>仅本机试听</Original>
+            <English>local preview</English>
+            <Chinesesimp>仅本机试听</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StartAt">
+            <Original>起始(秒)</Original>
+            <English>Start (s)</English>
+            <Chinesesimp>起始(秒)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StartAtTooltip">
+            <Original>从第几秒开始播放（0 = 从头）</Original>
+            <English>Start position in seconds (0 = from the beginning)</English>
+            <Chinesesimp>从第几秒开始播放（0 = 从头）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusFade">
+            <Original>全队音量 → %1（%2 秒）</Original>
+            <English>Music volume for all -&gt; %1 (%2 s)</English>
+            <Chinesesimp>全队音量 → %1（%2 秒）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusFadeIn">
+            <Original>全队淡入播放：%1（%2 秒）</Original>
+            <English>Fading in for all: %1 (%2 s)</English>
+            <Chinesesimp>全队淡入播放：%1（%2 秒）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusFadeOut">
+            <Original>全队淡出中，%1 秒后停止</Original>
+            <English>Fading out for all, stopping in %1 s</English>
+            <Chinesesimp>全队淡出中，%1 秒后停止</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusFavorited">
+            <Original>已收藏：%1</Original>
+            <English>Favorited: %1</English>
+            <Chinesesimp>已收藏：%1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusGroupAdded">
+            <Original>已添加分组：%1</Original>
+            <English>Group added: %1</English>
+            <Chinesesimp>已添加分组：%1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusGroupDeleted">
+            <Original>已删除分组：%1</Original>
+            <English>Group deleted: %1</English>
+            <Chinesesimp>已删除分组：%1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusGroupEmpty">
+            <Original>请先输入分组名</Original>
+            <English>Enter a group name first</English>
+            <Chinesesimp>请先输入分组名</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusGroupExists">
+            <Original>分组已存在</Original>
+            <English>Group already exists</English>
+            <Chinesesimp>分组已存在</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusGroupPick">
+            <Original>请先在「收藏」页签的分组筛选中选择要删除的分组</Original>
+            <English>Pick the group to delete in the group filter (Favorites tab) first</English>
+            <Chinesesimp>请先在「收藏」页签的分组筛选中选择要删除的分组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusNoteSaved">
+            <Original>备注已保存</Original>
+            <English>Note saved</English>
+            <Chinesesimp>备注已保存</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusNoteSavedAdded">
+            <Original>备注已保存（已自动加入收藏）</Original>
+            <English>Note saved (track added to favorites)</English>
+            <Chinesesimp>备注已保存（已自动加入收藏）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusPlayAll">
+            <Original>已向全体玩家播放：%1</Original>
+            <English>Playing for all players: %1</English>
+            <Chinesesimp>已向全体玩家播放：%1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusPreview">
+            <Original>试听（仅本机）：%1</Original>
+            <English>Previewing (local only): %1</English>
+            <Chinesesimp>试听（仅本机）：%1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusPreviewStopped">
+            <Original>已停止本机音乐</Original>
+            <English>Local music stopped</English>
+            <Chinesesimp>已停止本机音乐</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusStopAll">
+            <Original>已停止全体玩家的音乐</Original>
+            <English>Music stopped for all players</English>
+            <Chinesesimp>已停止全体玩家的音乐</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusUnfavorited">
+            <Original>已取消收藏：%1</Original>
+            <English>Removed from favorites: %1</English>
+            <Chinesesimp>已取消收藏：%1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StopAll">
+            <Original>全队停止</Original>
+            <English>Stop for all</English>
+            <Chinesesimp>全队停止</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StopAllTooltip">
+            <Original>[""] remoteExec ["playMusic", 0]</Original>
+            <English>[""] remoteExec ["playMusic", 0]</English>
+            <Chinesesimp>[""] remoteExec ["playMusic", 0]</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TabAll">
+            <Original>全部</Original>
+            <English>All</English>
+            <Chinesesimp>全部</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TabFavorites">
+            <Original>收藏</Original>
+            <English>Favorites</English>
+            <Chinesesimp>收藏</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Title">
+            <Original>Zeus 音乐播放器</Original>
+            <English>Zeus Music Player</English>
+            <Chinesesimp>Zeus 音乐播放器</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Ungrouped">
+            <Original>未分组</Original>
+            <English>Ungrouped</English>
+            <Chinesesimp>未分组</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Volume">
+            <Original>目标音量(0-1)</Original>
+            <English>Volume (0-1)</English>
+            <Chinesesimp>目标音量(0-1)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_VolumeTooltip">
+            <Original>0 = 静音，1 = 原始音量。最终音量还要乘以每位玩家自己的「音乐」音量设置。</Original>
+            <English>0 = silent, 1 = full. Each player's own music volume setting still applies on top of this.</English>
+            <Chinesesimp>0 = 静音，1 = 原始音量。最终音量还要乘以每位玩家自己的「音乐」音量设置。</Chinesesimp>
+        </Key>
+    </Package>
+</Project>
