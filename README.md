@@ -3,7 +3,7 @@
 给 Arma 3 Zeus 用的音乐播放器，**客户端模组**：只有 Zeus 自己加载，其他玩家和服务器都不用装。
 
 - 曲库直接来自所有已加载模组的 `CfgMusic`，不新增任何歌曲。
-- 全队播放只 `remoteExec` 引擎命令 `playMusic` / `fadeMusic`。因为其他玩家没装本模组，所以绝不 `remoteExec` 本模组的函数。
+- 全队播放只让其他玩家执行引擎命令 `playMusic` / `fadeMusic`，不调用本模组的函数（其他玩家没装本模组）。默认通过 ZEN 的事件通道发送，不受服务器 `CfgRemoteExec` 白名单影响，详见下面的「全队播放是怎么发出去的」。
 - 依赖：**CBA_A3**、**ZEN (Zeus Enhanced)**（写在 `requiredAddons` 里）。
 
 ## 功能
@@ -15,11 +15,11 @@
 | 收藏分组 | 默认「战斗 / 潜入 / 氛围 / 结尾」，可以新增、删除；收藏页签可以按分组筛选。 |
 | 曲目备注 | 每首收藏曲目可写备注名，可被搜索。 |
 | 试听 | 只在本机 `playMusic`，其他人听不到（双击列表也可以试听）。 |
-| 全队播放 | `[_class] remoteExec ["playMusic", 0]`（可设置起始秒数，此时为 `[[_class, 秒]] remoteExec ["playMusic", 0]`）。 |
-| 全队停止 | `[""] remoteExec ["playMusic", 0]` |
-| 淡入淡出 | `[时长, 音量] remoteExec ["fadeMusic", 0]`，时长、目标音量可调：淡入播放 / 淡出后停止 / 淡变到目标音量。 |
+| 全队播放 | 所有机器执行 `playMusic _class`（可设置起始秒数，此时为 `playMusic [_class, 秒]`）。 |
+| 全队停止 | 所有机器执行 `playMusic ""` |
+| 淡入淡出 | 所有机器执行 `时长 fadeMusic 音量`，时长、目标音量可调：淡入播放 / 淡出后停止 / 淡变到目标音量。 |
 | 正在播放 | 显示当前曲目、来源（全队 / 仅本机试听 / 其他来源：任务脚本或其他 Zeus）和进度。 |
-| 自检 | 打开时检查 `missionConfigFile` / `configFile` 的 `CfgRemoteExec >> Commands`，白名单模式下缺少 `playMusic` / `fadeMusic` 时界面顶部红色警告「全队播放可能被服务器拦截」。 |
+| 自检 | 界面顶部显示全队播放走的是哪条通道。如果在设置里改成 remoteExec 方式，会检查 `missionConfigFile` / `configFile` 的 `CfgRemoteExec >> Commands`，白名单里缺少 `playMusic` / `fadeMusic` 时显示红色警告「全队播放可能被服务器拦截」。 |
 | 权限 | 只有当前玩家是 curator（`getAssignedCuratorLogic player` 非空）时才能打开；打开期间被收回 Zeus 会自动关闭。 |
 
 ### 三个入口
@@ -62,13 +62,24 @@
 ### 注意事项
 
 - **音乐音量**：`playMusic` 受每位玩家自己的「设置 → 音频 → 音乐」音量影响，调成 0 的玩家听不到，Zeus 无法强制。界面底部有提示。
-- **全队包括你自己**：`remoteExec` 目标 `0` 包括 Zeus 本人（以及服务器），所以「正在播放」显示的就是全队正在听的。
+- **全队包括你自己**：全队播放会发给所有机器，包括 Zeus 本人（以及服务器），所以「正在播放」显示的就是全队正在听的。
 - **试听会替换你本机的音乐**：音乐通道只有一个，试听时你自己会暂时听不到全队的曲子（其他玩家不受影响）。
 - **淡出后的音量**：`fadeMusic` 改的音量会一直保持。「淡出停止」结束后会自动把音量复位；「全队播放」前也会先把音量设为「目标音量」，不会出现淡出到 0 之后新歌没声音的情况。
-- **自检的局限**：客户端只能看到任务 `description.ext` 和本机加载的模组。服务器专用模组（`-serverMod`）里的 `CfgRemoteExec`、BattlEye `remoteexec.txt` 过滤都检测不到。如果全队听不到，请让服务器管理员检查这些配置。
+- **自检的局限**（只在 remoteExec 方式下有意义）：客户端只能看到任务 `description.ext` 和本机加载的模组。服务器专用模组（`-serverMod`）里的 `CfgRemoteExec`、BattlEye `remoteexec.txt` 过滤都检测不到。
 - **不会污染任务**：本模组不添加任何可放置对象（模块通过 ZEN 的自定义模块注册），用它的 Zeus 保存的任务不会依赖本模组。
 
-如果任务或服务器使用 `CfgRemoteExec` 白名单，需要包含：
+### 全队播放是怎么发出去的
+
+其他玩家没有安装本模组，所以只能借用他们已经有的东西。在 ESC → 选项 → 插件设置 → Zeus Music Player →「全队播放方式」里可以选：
+
+| 方式 | 原理 | 会不会被服务器拦截 |
+| --- | --- | --- |
+| **ZEN 事件**（默认，推荐） | 用 `CBA_fnc_globalEvent` 触发 ZEN 在每台机器上都注册了的 `zen_common_execute` 事件，让它执行 `playMusic` / `fadeMusic`。ZEN 自己的「执行代码」等模块用的就是这条通道。CBA 事件通过 `publicVariable` 传输。 | 不经过 `remoteExec`，不受 `CfgRemoteExec` 白名单影响。只要 ZEN 在这台服务器上能用，它就能用。 |
+| **remoteExec** | `[_class] remoteExec ["playMusic", 0]`、`[时长, 音量] remoteExec ["fadeMusic", 0]` | 服务器的 `CfgRemoteExec` 白名单或 BattlEye `remoteexec.txt` 没放行这两个命令时会被拦截，结果只有 Zeus 自己听得到。 |
+
+一次操作的所有步骤（比如淡入播放的「音量归零 → 播放 → 淡入」）放在同一条事件里发送，保证在每台机器上按顺序执行。
+
+如果你选择 remoteExec 方式，而任务或服务器使用 `CfgRemoteExec` 白名单，白名单里需要包含：
 
 ```cpp
 class CfgRemoteExec {
@@ -98,6 +109,7 @@ class CfgRemoteExec {
 │       ├── script_version.hpp  # 版本号（HEMTT 读取）
 │       ├── ui_defines.hpp      # IDD / IDC / 网格宏
 │       ├── stringtable.xml     # 中文（默认）+ 英文
+│       ├── XEH_preInit.sqf          # CBA 设置：全队播放方式
 │       ├── XEH_postInitClient.sqf   # 注册 ZEN 模块、右键菜单、CBA 快捷键、音乐事件
 │       └── functions/
 │           ├── fn_canOpen.sqf           # 是否为 curator
@@ -105,7 +117,8 @@ class CfgRemoteExec {
 │           ├── fn_getLibrary.sqf        # 遍历 CfgMusic（缓存在 uiNamespace）
 │           ├── fn_getFavorites.sqf / fn_setFavorite.sqf / fn_removeFavorite.sqf
 │           ├── fn_getGroups.sqf / fn_setGroups.sqf / fn_profileSave.sqf
-│           ├── fn_play.sqf / fn_stop.sqf / fn_fade.sqf   # remoteExec 引擎命令
+│           ├── fn_play.sqf / fn_stop.sqf / fn_fade.sqf   # 播放控制
+│           ├── fn_broadcast.sqf         # 把 playMusic / fadeMusic 发给所有机器（ZEN 事件 / remoteExec）
 │           ├── fn_onMusicEvent.sqf      # MusicStart / MusicStop 跟踪当前曲目
 │           ├── fn_checkRemoteExec.sqf   # CfgRemoteExec 自检
 │           ├── fn_formatTime.sqf

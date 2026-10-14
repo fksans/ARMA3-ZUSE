@@ -5,7 +5,7 @@
  * Arguments:
  * 0: 模式 <STRING>
  *    "preview" - 只停止本机音乐
- *    "global"  - [""] remoteExec ["playMusic", 0]
+ *    "global"  - 全队 playMusic ""
  *    "fadeOut" - 全队淡出到 0，结束后停止并把音量复位
  * 1: 淡出时长（秒，仅 fadeOut） <NUMBER>
  * 2: 停止后复位的音量（仅 fadeOut） <NUMBER>
@@ -21,18 +21,17 @@ if (_mode == "preview") exitWith {
 };
 
 if (_mode == "fadeOut" && _fadeTime > 0) exitWith {
-    [_fadeTime, 0] remoteExec ["fadeMusic", 0];
+    [[["fade", _fadeTime, 0]]] call zmp_fnc_broadcast;
 
     // 淡出完成后再停止；如果期间又有新的播放/停止操作，这次延时操作作废
     [{
         params ["_token", "_restoreVolume"];
         if (_token != zmp_actionToken) exitWith {};
 
-        [""] remoteExec ["playMusic", 0];
-        [0, _restoreVolume] remoteExec ["fadeMusic", 0];
+        [[["play", ""], ["fade", 0, _restoreVolume]]] call zmp_fnc_broadcast;
         zmp_nowPlaying = [];
     }, [zmp_actionToken, _restoreVolume], _fadeTime + 0.2] call CBA_fnc_waitAndExecute;
 };
 
-[""] remoteExec ["playMusic", 0];
+[[["play", ""]]] call zmp_fnc_broadcast;
 zmp_nowPlaying = [];

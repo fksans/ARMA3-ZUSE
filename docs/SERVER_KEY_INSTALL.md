@@ -56,10 +56,11 @@ key 只在服务器启动时读取，**必须重启**（重开任务不够）。
 - 作者用的是**固定 key**（文件名 `zmp.bikey`）：什么都不用做。
 - 作者用的是**默认方式**（文件名带版本号，如 `zmp_1.1.0.0.bikey`）：每个新版本都要放入新的 `.bikey` 并重启；旧版本的 key 可以删掉（删了以后旧版本模组就进不来了）。
 
-## 7.（可选）远程执行白名单
+## 7.（一般不需要）远程执行白名单
 
-全队播放用的是引擎命令 `playMusic` / `fadeMusic` 的 `remoteExec`。
-如果服务器 / 任务启用了 `CfgRemoteExec` 白名单（`Commands` 的 `mode = 1`），需要放行这两个命令，否则 Zeus 只能自己听到：
+默认情况下，全队播放通过 ZEN 的事件通道发送（和 ZEN 自己的模块用同一条通道），**不受 `CfgRemoteExec` 白名单影响，服务器不需要做任何设置**。
+
+只有当 Zeus 在插件设置里把「全队播放方式」改成 remoteExec，并且服务器 / 任务启用了 `CfgRemoteExec` 白名单（`Commands` 的 `mode = 1`）时，才需要放行这两个命令：
 
 ```cpp
 class CfgRemoteExec {
@@ -72,4 +73,3 @@ class CfgRemoteExec {
 ```
 
 如果启用了 BattlEye 的 `remoteexec.txt` 过滤，也要放行 `playMusic` 和 `fadeMusic`。
-播放器打开时会自动检查任务和本机能看到的 `CfgRemoteExec` 配置并给出警告，但服务器专用模组和 BattlEye 过滤它检测不到。
