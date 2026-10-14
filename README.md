@@ -110,6 +110,8 @@ class CfgRemoteExec {
 │           ├── fn_checkRemoteExec.sqf   # CfgRemoteExec 自检
 │           ├── fn_formatTime.sqf
 │           └── fn_ui_*.sqf              # 界面逻辑
+├── .github/workflows/
+│   └── build.yml               # CI：PR 检查 + 打标签自动发布到 GitHub Releases
 ├── docs/
 │   └── SERVER_KEY_INSTALL.md   # 给服务器腐竹的 key 安装说明
 ├── mod.cpp
@@ -195,10 +197,36 @@ HEMTT 有两种签名方式，二选一：
    发新版本时服务器不需要做任何改动。
 
 > 固定私钥只能在本地使用：HEMTT 检测到 CI 环境时会拒绝使用私钥文件。
+> 所以选了 B 之后，下面的「自动打包发布」会在 `hemtt release` 这一步失败，需要改成本地 `hemtt release`，再把 zip 和 `.bikey` 手动传到 GitHub Releases。
 
 ### 5. 改版本号
 
 修改 `addons/main/script_version.hpp` 里的 `MAJOR / MINOR / PATCH / BUILD`。
+
+### 6. 自动打包发布（GitHub Actions）
+
+`.github/workflows/build.yml` 做两件事：
+
+- **推到 main / 提 PR**：运行 `hemtt check`，有错误会在 PR 上标红。
+- **推 `v*` 标签**：运行 `hemtt release` 构建并签名，然后在 GitHub **Releases** 页面创建一个版本，附上两个文件：
+  - `zmp-<版本>.zip`：给 Zeus 玩家下载，解压就是 `@zeus_music_player`
+  - `zmp_<版本>.bikey`：给服务器腐竹
+
+发新版本的步骤：
+
+1. 改 `addons/main/script_version.hpp` 里的版本号，比如改成 `1.0.1`，提交并推到 main。
+2. 打一个**和版本号一致**的标签并推上去：
+
+   ```sh
+   git tag v1.0.1
+   git push origin v1.0.1
+   ```
+
+   也可以在 GitHub 网页上操作：Releases → Draft a new release → 标签填 `v1.0.1`（选 main）→ Publish release。标签推上去后 Actions 会自动把 zip 和 `.bikey` 加到这个 Release 里。
+3. 等 Actions 跑完（仓库的 Actions 页面能看到进度），Releases 页面就会出现新版本。
+
+- 标签必须和 `script_version.hpp` 的 `MAJOR.MINOR.PATCH` 一致（`v1.0.1` 对应 `1.0.1`），不一致时工作流会直接报错，不会发出版本号对不上的包。
+- CI 里用的是默认签名方式 A：**每个版本的 `.bikey` 都不同**，更新版本后要把新的 `.bikey` 发给腐竹。
 
 ## 给服务器腐竹
 
