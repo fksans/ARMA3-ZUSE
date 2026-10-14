@@ -10,7 +10,9 @@ git_hash = 0
 [files]
 include = [
     "mod.cpp",
+    "meta.cpp",
     "README.md",
+    "LICENSE.md",
 ]
 
 [properties]
@@ -18,6 +20,11 @@ author = "fksans"
 
 [hemtt.release]
 folder = "zeus_music_player"
+
+# `hemtt publish`：上传到 Steam 创意工坊时，用这两个文件更新介绍页和更新日志
+[hemtt.publish]
+description = "docs/WORKSHOP.md"
+changelog = "CHANGELOG.md"
 
 # ---------------------------------------------------------------------------
 # 固定签名 key（推荐）

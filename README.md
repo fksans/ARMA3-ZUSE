@@ -51,7 +51,7 @@
 └───────────────────────────────────────────────────────────────────┘
 ```
 
-界面文字跟随游戏语言：中文显示中文，英文游戏显示英文，其他语言默认中文。
+界面文字跟随游戏语言：简体中文显示中文，其他语言都显示英文。
 
 ### 存储（profileNamespace）
 
@@ -115,7 +115,7 @@ class CfgRemoteExec {
 │       ├── script_component.hpp
 │       ├── script_version.hpp  # 版本号（HEMTT 读取）
 │       ├── ui_defines.hpp      # IDD / IDC / 网格宏
-│       ├── stringtable.xml     # 中文（默认）+ 英文
+│       ├── stringtable.xml     # 英文（默认）+ 简体中文
 │       ├── XEH_preInit.sqf          # CBA 设置：全队播放方式
 │       ├── XEH_postInitClient.sqf   # 注册 ZEN 模块、右键菜单、CBA 快捷键、音乐事件
 │       └── functions/
@@ -133,7 +133,10 @@ class CfgRemoteExec {
 ├── .github/workflows/
 │   └── build.yml               # CI：PR 检查 + 打标签自动发布到 GitHub Releases
 ├── docs/
-│   └── SERVER_KEY_INSTALL.md   # 给服务器腐竹的 key 安装说明
+│   ├── SERVER_KEY_INSTALL.md   # 给服务器腐竹的 key 安装说明
+│   └── WORKSHOP.md             # 创意工坊介绍页（英文 + 中文）
+├── CHANGELOG.md                # 更新日志（hemtt publish 用它写创意工坊的更新说明）
+├── LICENSE.md                  # APL-SA
 ├── mod.cpp
 └── README.md
 ```
@@ -176,6 +179,8 @@ hemtt release
 │   └── zmp_main.pbo.<authority>.bisign
 ├── keys/
 │   └── <authority>.bikey              # 交给服务器
+├── CHANGELOG.md                # 更新日志（hemtt publish 用它写创意工坊的更新说明）
+├── LICENSE.md                  # APL-SA
 ├── mod.cpp
 └── README.md
 releases/
@@ -191,7 +196,7 @@ HEMTT 有两种签名方式，二选一：
 
 **A. 默认：每个版本一把新 key（零配置）**
 
-`hemtt release` 每次随机生成私钥签名后就丢弃，authority 为 `zmp_<版本号>`，例如 `zmp_1.0.0.0.bikey`。
+`hemtt release` 每次随机生成私钥签名后就丢弃，authority 为 `zmp_<版本号>`，例如 `zmp_1.2.1.bikey`。
 私钥从不落盘，最安全；但**每发一个新版本，服务器都要换一次 `.bikey`**（旧 key 可以删掉）。
 
 **B. 推荐：固定 key（服务器只装一次）**
@@ -221,7 +226,7 @@ HEMTT 有两种签名方式，二选一：
 
 ### 5. 改版本号
 
-修改 `addons/main/script_version.hpp` 里的 `MAJOR / MINOR / PATCH / BUILD`。
+修改 `addons/main/script_version.hpp` 里的 `MAJOR / MINOR / PATCH`，并在 `CHANGELOG.md` 里加上这个版本的条目。
 
 ### 6. 自动打包发布（GitHub Actions）
 
@@ -255,6 +260,33 @@ HEMTT 有两种签名方式，二选一：
 
 - 标签必须和 `script_version.hpp` 的 `MAJOR.MINOR.PATCH` 一致（`v1.0.1` 对应 `1.0.1`），不一致时工作流会直接报错，不会发出版本号对不上的包。
 - CI 里用的是默认签名方式 A：**每个版本的 `.bikey` 都不同**，更新版本后要把新的 `.bikey` 发给腐竹。
+
+### 7. 发布到 Steam 创意工坊
+
+HEMTT 自带 `hemtt publish`：先做一次 `hemtt release`，再把结果上传到创意工坊。介绍页会用 `docs/WORKSHOP.md` 生成，更新说明取 `CHANGELOG.md` 里对应版本的条目（在 `.hemtt/project.toml` 的 `[hemtt.publish]` 里配置）。
+
+**需要在你自己的 Windows 电脑上操作，Steam 必须开着并已登录**（上传走的是 Steam 客户端，CI 里做不了）。
+
+1. 改好版本号（`addons/main/script_version.hpp`），并在 `CHANGELOG.md` 最上面加上这个版本的条目，比如 `## [1.3.0]`。**没有对应版本的条目，`hemtt publish` 会直接报错。**
+2. 在仓库根目录运行：
+
+   ```sh
+   hemtt publish
+   ```
+
+   - **第一次**会问你是否新建创意工坊物品。确认后 HEMTT 会在仓库根目录生成 `meta.cpp`，里面记录了物品 ID。**把 `meta.cpp` 提交到仓库**，以后再运行就是更新同一个物品，不会重复新建。
+   - 第一次上传后，到 Steam 上同意创意工坊条款（如果提示需要的话）。
+
+3. 第一次上传后，在创意工坊页面上手动补几样东西（HEMTT 不会自动设置）：
+   - **必需物品**：添加 CBA_A3 和 Zeus Enhanced，订阅的人会自动装上依赖。
+   - **可见性**：默认可能是隐藏或仅好友可见，确认没问题后改成公开。
+   - **预览图**：可选。不设置的话，Steam 会显示默认的灰色占位图。
+
+**签名 key**：`hemtt publish` 打包时也会签名。现在没配固定 key，每个版本的 `.bikey` 都不一样，用这个模组的服务器每次更新都要换 key。正式上架前，建议按上面「签名与 key」的 B 方式换成固定 key。
+
+## 许可证
+
+[Arma Public License Share Alike (APL-SA)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)，见 [LICENSE.md](LICENSE.md)。
 
 ## 给服务器腐竹
 
