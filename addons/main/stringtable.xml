@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ZMP">
     <Package name="main">
+        <Key ID="STR_ZMP_ABLoop">
+            <Original>AB 循环</Original>
+            <English>A-B loop</English>
+            <Chinesesimp>AB 循环</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_ABLoopTooltip">
+            <Original>发给「播放对象」：从 A 点播到 B 点后跳回 A 点，一直循环（接缝处有很短的淡出淡入）。\n点「播放」「停止」或「淡出停止」都会结束循环。</Original>
+            <English>Send to the target: play from A to B, then jump back to A, forever (with a very short fade at the seam).\nPlay, Stop or Fade out ends the loop.</English>
+            <Chinesesimp>发给「播放对象」：从 A 点播到 B 点后跳回 A 点，一直循环（接缝处有很短的淡出淡入）。\n点「播放」「停止」或「淡出停止」都会结束循环。</Chinesesimp>
+        </Key>
         <Key ID="STR_ZMP_AddFavorite">
             <Original>★ 收藏</Original>
             <English>★ Favorite</English>
@@ -166,6 +176,11 @@
             <English>Only works while you are a Zeus (curator)</English>
             <Chinesesimp>仅当你是 Zeus（curator）时有效</Chinesesimp>
         </Key>
+        <Key ID="STR_ZMP_LoopEndTooltip">
+            <Original>B 点（秒）：AB 循环播到这里就跳回 A 点。普通播放不用填。</Original>
+            <English>Point B (seconds): the AB loop jumps back to A here. Not needed for normal playback.</English>
+            <Chinesesimp>B 点（秒）：AB 循环播到这里就跳回 A 点。普通播放不用填。</Chinesesimp>
+        </Key>
         <Key ID="STR_ZMP_ModuleCategory">
             <Original>音乐</Original>
             <English>Music</English>
@@ -210,6 +225,11 @@
             <Original>正在播放：%1  [%2]  ·  %3  ·  %4 / %5</Original>
             <English>Now playing: %1  [%2]  ·  %3  ·  %4 / %5</English>
             <Chinesesimp>正在播放：%1  [%2]  ·  %3  ·  %4 / %5</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_NowPlayingLoop">
+            <Original>·  AB 循环 %1 – %2</Original>
+            <English>·  A-B loop %1 – %2</English>
+            <Chinesesimp>·  AB 循环 %1 – %2</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NowPlayingNone">
             <Original>正在播放：（无）</Original>
@@ -311,6 +331,16 @@
             <English>Select a track in the list first</English>
             <Chinesesimp>请先在列表中选择一首曲目</Chinesesimp>
         </Key>
+        <Key ID="STR_ZMP_SetATooltip">
+            <Original>把当前播放进度填为 A 点。\n先试听，听到合适的位置时点一下。</Original>
+            <English>Set point A to the current playback position.\nPreview first, then click at the right moment.</English>
+            <Chinesesimp>把当前播放进度填为 A 点。\n先试听，听到合适的位置时点一下。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SetBTooltip">
+            <Original>把当前播放进度填为 B 点。\n先试听，听到合适的位置时点一下。</Original>
+            <English>Set point B to the current playback position.\nPreview first, then click at the right moment.</English>
+            <Chinesesimp>把当前播放进度填为 B 点。\n先试听，听到合适的位置时点一下。</Chinesesimp>
+        </Key>
         <Key ID="STR_ZMP_SettingTransport">
             <Original>全队播放方式</Original>
             <English>Broadcast method</English>
@@ -356,15 +386,15 @@
             <English>local preview</English>
             <Chinesesimp>仅本机试听</Chinesesimp>
         </Key>
-        <Key ID="STR_ZMP_StartAt">
-            <Original>起始(秒)</Original>
-            <English>Start (s)</English>
-            <Chinesesimp>起始(秒)</Chinesesimp>
-        </Key>
         <Key ID="STR_ZMP_StartAtTooltip">
-            <Original>从第几秒开始播放（0 = 从头）</Original>
-            <English>Start position in seconds (0 = from the beginning)</English>
-            <Chinesesimp>从第几秒开始播放（0 = 从头）</Chinesesimp>
+            <Original>A 点 / 起始位置（秒）。普通播放从这里开始（0 = 从头），AB 循环从这里开始循环。</Original>
+            <English>Point A / start position (seconds). Normal playback starts here (0 = from the beginning); AB loop loops from here.</English>
+            <Chinesesimp>A 点 / 起始位置（秒）。普通播放从这里开始（0 = 从头），AB 循环从这里开始循环。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusABLoop">
+            <Original>向「%4」AB 循环：%1（%2 – %3）</Original>
+            <English>A-B loop for "%4": %1 (%2 – %3)</English>
+            <Chinesesimp>向「%4」AB 循环：%1（%2 – %3）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFade">
             <Original>「%3」音量 → %1（%2 秒）</Original>
@@ -411,6 +441,16 @@
             <English>Pick the group to delete in the group filter (Favorites tab) first</English>
             <Chinesesimp>请先在「收藏」页签的分组筛选中选择要删除的分组</Chinesesimp>
         </Key>
+        <Key ID="STR_ZMP_StatusLoopInvalid">
+            <Original>B 点要比 A 点至少晚 1 秒</Original>
+            <English>Point B must be at least 1 second after A</English>
+            <Chinesesimp>B 点要比 A 点至少晚 1 秒</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusLoopTooLong">
+            <Original>B 点超过了曲目时长（%1）</Original>
+            <English>Point B is past the end of the track (%1)</English>
+            <Chinesesimp>B 点超过了曲目时长（%1）</Chinesesimp>
+        </Key>
         <Key ID="STR_ZMP_StatusNoCuratorSelection">
             <Original>Zeus 界面里没有选中任何单位，先在 Zeus 里选中单位或小队</Original>
             <English>Nothing is selected in Zeus; select units or squads first</English>
@@ -420,6 +460,11 @@
             <Original>选中的单位里没有玩家</Original>
             <English>None of the selected units is a player</English>
             <Chinesesimp>选中的单位里没有玩家</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusNoPosition">
+            <Original>先试听或播放一首歌，再点 A / B 记录当前位置</Original>
+            <English>Preview or play a track first, then click A / B to record the position</English>
+            <Chinesesimp>先试听或播放一首歌，再点 A / B 记录当前位置</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusNoteSaved">
             <Original>备注已保存</Original>
@@ -445,6 +490,16 @@
             <Original>已停止本机音乐</Original>
             <English>Local music stopped</English>
             <Chinesesimp>已停止本机音乐</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusSetA">
+            <Original>A 点 = %1（%2 秒）</Original>
+            <English>Point A = %1 (%2 s)</English>
+            <Chinesesimp>A 点 = %1（%2 秒）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusSetB">
+            <Original>B 点 = %1（%2 秒）</Original>
+            <English>Point B = %1 (%2 s)</English>
+            <Chinesesimp>B 点 = %1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusStopAll">
             <Original>已停止「%1」的音乐</Original>

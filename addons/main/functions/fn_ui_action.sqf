@@ -18,10 +18,10 @@ private _trackName = _class;
 if (_track isNotEqualTo []) then {
     _trackName = _track select 2;
 };
-(call zmp_fnc_ui_readPlaybackParams) params ["_fadeTime", "_volume", "_start"];
+(call zmp_fnc_ui_readPlaybackParams) params ["_fadeTime", "_volume", "_start", "_loopEnd"];
 
 // 需要选中曲目的动作
-private _needsSelection = ["toggleFavorite", "saveNote", "groupChanged", "preview", "playAll", "fadeInPlay"];
+private _needsSelection = ["toggleFavorite", "saveNote", "groupChanged", "preview", "playAll", "fadeInPlay", "abLoop"];
 if (_action in _needsSelection && _class == "") exitWith {
     if (_action != "groupChanged") then {
         [localize "STR_ZMP_SelectFirst", [1, 0.4, 0.4, 1]] call zmp_fnc_ui_setStatus;
@@ -29,16 +29,30 @@ if (_action in _needsSelection && _class == "") exitWith {
 };
 
 // 需要曲目在当前服务器已加载的动作
-if (_action in ["preview", "playAll", "fadeInPlay"] && {_track isEqualTo []}) exitWith {
+if (_action in ["preview", "playAll", "fadeInPlay", "abLoop"] && {_track isEqualTo []}) exitWith {
     [format [localize "STR_ZMP_InfoNotLoaded", _class], [1, 0.4, 0.4, 1]] call zmp_fnc_ui_setStatus;
 };
 
 // 发给其他玩家的动作：读取播放对象（失败时 readTarget 已在状态栏提示）
 private _targetInfo = [];
-if (_action in ["playAll", "stopAll", "fadeInPlay", "fadeOutStop", "fadeApply"]) then {
+// AB 循环：B 点必须比 A 点晚至少 1 秒，且不超过曲目时长（时长已知时）
+if (_action == "abLoop") then {
+    private _duration = _track select 3;
+    if (_loopEnd < _start + 1) exitWith {
+        [localize "STR_ZMP_StatusLoopInvalid", [1, 0.4, 0.4, 1]] call zmp_fnc_ui_setStatus;
+        _action = "";
+    };
+    if (_duration > 0 && _loopEnd > _duration) exitWith {
+        [format [localize "STR_ZMP_StatusLoopTooLong", [_duration] call zmp_fnc_formatTime], [1, 0.4, 0.4, 1]] call zmp_fnc_ui_setStatus;
+        _action = "";
+    };
+};
+if (_action == "") exitWith {};
+
+if (_action in ["playAll", "stopAll", "fadeInPlay", "fadeOutStop", "fadeApply", "abLoop"]) then {
     _targetInfo = call zmp_fnc_ui_readTarget;
 };
-if (_action in ["playAll", "stopAll", "fadeInPlay", "fadeOutStop", "fadeApply"] && {_targetInfo isEqualTo []}) exitWith {};
+if (_action in ["playAll", "stopAll", "fadeInPlay", "fadeOutStop", "fadeApply", "abLoop"] && {_targetInfo isEqualTo []}) exitWith {};
 _targetInfo params [["_target", [["all"], objNull]], ["_targetLabel", ""]];
 
 private _ctrlGroup = _display displayCtrl IDC_ZMP_GROUP;
@@ -51,6 +65,18 @@ private _favorite = (call zmp_fnc_getFavorites) select {_x select 0 == _class};
 switch (_action) do {
     case "close": {
         _display closeDisplay 2;
+    };
+    // ---- A / B 点：把当前播放进度填进去 ----
+    case "setA";
+    case "setB": {
+        private _position = call zmp_fnc_currentPosition;
+        if (_position isEqualTo []) exitWith {
+            [localize "STR_ZMP_StatusNoPosition", [1, 0.4, 0.4, 1]] call zmp_fnc_ui_setStatus;
+        };
+        private _seconds = (round ((_position select 1) * 10)) / 10;
+        private _idc = [IDC_ZMP_LOOP_END, IDC_ZMP_START] select (_action == "setA");
+        (_display displayCtrl _idc) ctrlSetText str _seconds;
+        [format [localize (["STR_ZMP_StatusSetB", "STR_ZMP_StatusSetA"] select (_action == "setA")), [_seconds, true] call zmp_fnc_formatTime, _seconds]] call zmp_fnc_ui_setStatus;
     };
     case "refreshTargets": {
         [] call zmp_fnc_ui_refreshTargets;
@@ -129,6 +155,16 @@ switch (_action) do {
     case "playAll": {
         [_class, "global", _start, _volume, 0, _target, _targetLabel] call zmp_fnc_play;
         [format [localize "STR_ZMP_StatusPlayAll", _trackName, _targetLabel]] call zmp_fnc_ui_setStatus;
+    };
+    case "abLoop": {
+        [_class, "abLoop", _start, _volume, 0, _target, _targetLabel, _loopEnd] call zmp_fnc_play;
+        [format [
+            localize "STR_ZMP_StatusABLoop",
+            _trackName,
+            [_start, true] call zmp_fnc_formatTime,
+            [_loopEnd, true] call zmp_fnc_formatTime,
+            _targetLabel
+        ]] call zmp_fnc_ui_setStatus;
     };
     case "stopAll": {
         ["global", 0, 1, _target] call zmp_fnc_stop;

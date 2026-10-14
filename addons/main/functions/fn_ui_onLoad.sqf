@@ -120,6 +120,9 @@ _ctrlIncludeSelf ctrlAddEventHandler ["CheckedChanged", {
     [IDC_ZMP_PREVIEW_STOP, "previewStop"],
     [IDC_ZMP_PLAY_ALL, "playAll"],
     [IDC_ZMP_STOP_ALL, "stopAll"],
+    [IDC_ZMP_SET_A, "setA"],
+    [IDC_ZMP_SET_B, "setB"],
+    [IDC_ZMP_AB_LOOP, "abLoop"],
     [IDC_ZMP_FADE_IN_PLAY, "fadeInPlay"],
     [IDC_ZMP_FADE_OUT_STOP, "fadeOutStop"],
     [IDC_ZMP_FADE_APPLY, "fadeApply"]
