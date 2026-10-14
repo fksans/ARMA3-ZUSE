@@ -82,6 +82,20 @@ _ctrlList ctrlAddEventHandler ["LBDblClick", {["preview"] call zmp_fnc_ui_action
     };
 }];
 
+// ---- 播放对象 ----
+[] call zmp_fnc_ui_refreshTargets;
+(_display displayCtrl IDC_ZMP_TARGET) ctrlAddEventHandler ["LBSelChanged", {
+    params ["_ctrl", "_index"];
+    if (uiNamespace getVariable ["zmp_suppressEvents", false]) exitWith {};
+    uiNamespace setVariable ["zmp_lastTarget", _ctrl lbData _index];
+}];
+private _ctrlIncludeSelf = _display displayCtrl IDC_ZMP_INCLUDE_SELF;
+_ctrlIncludeSelf cbSetChecked (uiNamespace getVariable ["zmp_includeSelf", true]);
+_ctrlIncludeSelf ctrlAddEventHandler ["CheckedChanged", {
+    params ["", "_checked"];
+    uiNamespace setVariable ["zmp_includeSelf", _checked == 1];
+}];
+
 // ---- 播放参数（上次的设置保存在 profileNamespace） ----
 (_display displayCtrl IDC_ZMP_FADE_TIME) ctrlSetText str (profileNamespace getVariable [PROFILE_FADE_TIME, 5]);
 (_display displayCtrl IDC_ZMP_VOLUME) ctrlSetText str (profileNamespace getVariable [PROFILE_VOLUME, 1]);
@@ -97,6 +111,7 @@ _ctrlList ctrlAddEventHandler ["LBDblClick", {["preview"] call zmp_fnc_ui_action
     }];
 } forEach [
     [IDC_ZMP_CLOSE, "close"],
+    [IDC_ZMP_TARGET_REFRESH, "refreshTargets"],
     [IDC_ZMP_FAVORITE, "toggleFavorite"],
     [IDC_ZMP_SAVE_NOTE, "saveNote"],
     [IDC_ZMP_ADD_GROUP, "addGroup"],

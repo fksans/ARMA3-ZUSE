@@ -10,6 +10,7 @@ class ctrlEdit;
 class ctrlCombo;
 class ctrlToolbox;
 class ctrlListNBox;
+class ctrlCheckbox;
 
 #define TEXT_SIZE QUOTE(POS_H(0.85))
 #define TEXT_SIZE_SMALL QUOTE(POS_H(0.75))
@@ -191,7 +192,7 @@ class zmp_display {
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(7.7));
             w = QUOTE(POS_W(37));
-            h = QUOTE(POS_H(10.3));
+            h = QUOTE(POS_H(9));
             colorBackground[] = {0, 0, 0, 0.6};
         };
 
@@ -201,21 +202,21 @@ class zmp_display {
             sizeEx = TEXT_SIZE_SMALL;
             colorText[] = {0.8, 0.8, 0.8, 1};
             x = QUOTE(POS_X(1.5));
-            y = QUOTE(POS_Y(18.2));
+            y = QUOTE(POS_Y(16.9));
             w = QUOTE(POS_W(22));
         };
         class NewGroup: zmp_RscEdit {
             idc = IDC_ZMP_NEW_GROUP;
             tooltip = "$STR_ZMP_NewGroupTooltip";
             x = QUOTE(POS_X(23.7));
-            y = QUOTE(POS_Y(18.2));
+            y = QUOTE(POS_Y(16.9));
             w = QUOTE(POS_W(6));
         };
         class AddGroup: zmp_RscButton {
             idc = IDC_ZMP_ADD_GROUP;
             text = "$STR_ZMP_AddGroup";
             x = QUOTE(POS_X(29.9));
-            y = QUOTE(POS_Y(18.2));
+            y = QUOTE(POS_Y(16.9));
             w = QUOTE(POS_W(4.2));
             h = QUOTE(POS_H(1));
         };
@@ -224,7 +225,7 @@ class zmp_display {
             text = "$STR_ZMP_DeleteGroup";
             tooltip = "$STR_ZMP_DeleteGroupTooltip";
             x = QUOTE(POS_X(34.3));
-            y = QUOTE(POS_Y(18.2));
+            y = QUOTE(POS_Y(16.9));
             w = QUOTE(POS_W(4.2));
             h = QUOTE(POS_H(1));
         };
@@ -234,44 +235,83 @@ class zmp_display {
             idc = IDC_ZMP_FAVORITE;
             text = "$STR_ZMP_AddFavorite";
             x = QUOTE(POS_X(1.5));
-            y = QUOTE(POS_Y(19.4));
+            y = QUOTE(POS_Y(18.1));
             w = QUOTE(POS_W(6));
         };
         class GroupLabel: zmp_RscLabel {
             text = "$STR_ZMP_Group";
             x = QUOTE(POS_X(7.7));
-            y = QUOTE(POS_Y(19.45));
+            y = QUOTE(POS_Y(18.15));
             w = QUOTE(POS_W(2));
         };
         class Group: zmp_RscCombo {
             idc = IDC_ZMP_GROUP;
             tooltip = "$STR_ZMP_GroupTooltip";
             x = QUOTE(POS_X(9.7));
-            y = QUOTE(POS_Y(19.45));
+            y = QUOTE(POS_Y(18.15));
             w = QUOTE(POS_W(8));
         };
         class NoteLabel: zmp_RscLabel {
             text = "$STR_ZMP_Note";
             x = QUOTE(POS_X(17.9));
-            y = QUOTE(POS_Y(19.45));
+            y = QUOTE(POS_Y(18.15));
             w = QUOTE(POS_W(2));
         };
         class Note: zmp_RscEdit {
             idc = IDC_ZMP_NOTE;
             tooltip = "$STR_ZMP_NoteTooltip";
             x = QUOTE(POS_X(19.9));
-            y = QUOTE(POS_Y(19.45));
+            y = QUOTE(POS_Y(18.15));
             w = QUOTE(POS_W(14.3));
         };
         class SaveNote: zmp_RscButton {
             idc = IDC_ZMP_SAVE_NOTE;
             text = "$STR_ZMP_SaveNote";
             x = QUOTE(POS_X(34.4));
-            y = QUOTE(POS_Y(19.4));
+            y = QUOTE(POS_Y(18.1));
             w = QUOTE(POS_W(4.1));
         };
 
-        // ---- 行 7：播放 ----
+        // ---- 行 7：播放对象 ----
+        class TargetLabel: zmp_RscLabel {
+            text = "$STR_ZMP_Target";
+            x = QUOTE(POS_X(1.5));
+            y = QUOTE(POS_Y(19.45));
+            w = QUOTE(POS_W(4));
+        };
+        class Target: zmp_RscCombo {
+            idc = IDC_ZMP_TARGET;
+            tooltip = "$STR_ZMP_TargetTooltip";
+            x = QUOTE(POS_X(5.5));
+            y = QUOTE(POS_Y(19.45));
+            w = QUOTE(POS_W(20));
+        };
+        class TargetRefresh: zmp_RscButton {
+            idc = IDC_ZMP_TARGET_REFRESH;
+            text = "$STR_ZMP_TargetRefresh";
+            tooltip = "$STR_ZMP_TargetRefreshTooltip";
+            x = QUOTE(POS_X(25.7));
+            y = QUOTE(POS_Y(19.45));
+            w = QUOTE(POS_W(3.3));
+            h = QUOTE(POS_H(1));
+        };
+        class IncludeSelf: ctrlCheckbox {
+            idc = IDC_ZMP_INCLUDE_SELF;
+            tooltip = "$STR_ZMP_IncludeSelfTooltip";
+            x = QUOTE(POS_X(29.4));
+            y = QUOTE(POS_Y(19.45));
+            w = QUOTE(POS_W(1));
+            h = QUOTE(POS_H(1));
+        };
+        class IncludeSelfLabel: zmp_RscText {
+            text = "$STR_ZMP_IncludeSelf";
+            tooltip = "$STR_ZMP_IncludeSelfTooltip";
+            x = QUOTE(POS_X(30.5));
+            y = QUOTE(POS_Y(19.45));
+            w = QUOTE(POS_W(8));
+        };
+
+        // ---- 行 8：播放 ----
         class Preview: zmp_RscButton {
             idc = IDC_ZMP_PREVIEW;
             text = "$STR_ZMP_Preview";
@@ -320,7 +360,7 @@ class zmp_display {
             w = QUOTE(POS_W(2.4));
         };
 
-        // ---- 行 8：淡入淡出 ----
+        // ---- 行 9：淡入淡出 ----
         class FadeTimeLabel: zmp_RscLabel {
             text = "$STR_ZMP_FadeTime";
             x = QUOTE(POS_X(1.5));
@@ -372,7 +412,7 @@ class zmp_display {
             w = QUOTE(POS_W(7.1));
         };
 
-        // ---- 行 9：提示 ----
+        // ---- 行 10：提示 ----
         class Hint: ctrlStructuredText {
             idc = IDC_ZMP_HINT;
             size = TEXT_SIZE_SMALL;

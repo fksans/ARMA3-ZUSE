@@ -33,6 +33,14 @@ if (_action in ["preview", "playAll", "fadeInPlay"] && {_track isEqualTo []}) ex
     [format [localize "STR_ZMP_InfoNotLoaded", _class], [1, 0.4, 0.4, 1]] call zmp_fnc_ui_setStatus;
 };
 
+// 发给其他玩家的动作：读取播放对象（失败时 readTarget 已在状态栏提示）
+private _targetInfo = [];
+if (_action in ["playAll", "stopAll", "fadeInPlay", "fadeOutStop", "fadeApply"]) then {
+    _targetInfo = call zmp_fnc_ui_readTarget;
+};
+if (_action in ["playAll", "stopAll", "fadeInPlay", "fadeOutStop", "fadeApply"] && {_targetInfo isEqualTo []}) exitWith {};
+_targetInfo params [["_target", [["all"], objNull]], ["_targetLabel", ""]];
+
 private _ctrlGroup = _display displayCtrl IDC_ZMP_GROUP;
 private _selectedGroup = "";
 if (lbCurSel _ctrlGroup >= 0) then {
@@ -43,6 +51,10 @@ private _favorite = (call zmp_fnc_getFavorites) select {_x select 0 == _class};
 switch (_action) do {
     case "close": {
         _display closeDisplay 2;
+    };
+    case "refreshTargets": {
+        [] call zmp_fnc_ui_refreshTargets;
+        [localize "STR_ZMP_StatusTargetsRefreshed"] call zmp_fnc_ui_setStatus;
     };
 
     // ---- 收藏 ----
@@ -115,24 +127,24 @@ switch (_action) do {
         [localize "STR_ZMP_StatusPreviewStopped"] call zmp_fnc_ui_setStatus;
     };
     case "playAll": {
-        [_class, "global", _start, _volume] call zmp_fnc_play;
-        [format [localize "STR_ZMP_StatusPlayAll", _trackName]] call zmp_fnc_ui_setStatus;
+        [_class, "global", _start, _volume, 0, _target, _targetLabel] call zmp_fnc_play;
+        [format [localize "STR_ZMP_StatusPlayAll", _trackName, _targetLabel]] call zmp_fnc_ui_setStatus;
     };
     case "stopAll": {
-        ["global"] call zmp_fnc_stop;
-        [localize "STR_ZMP_StatusStopAll"] call zmp_fnc_ui_setStatus;
+        ["global", 0, 1, _target] call zmp_fnc_stop;
+        [format [localize "STR_ZMP_StatusStopAll", _targetLabel]] call zmp_fnc_ui_setStatus;
     };
     case "fadeInPlay": {
-        [_class, "fadeIn", _start, _volume, _fadeTime] call zmp_fnc_play;
-        [format [localize "STR_ZMP_StatusFadeIn", _trackName, _fadeTime]] call zmp_fnc_ui_setStatus;
+        [_class, "fadeIn", _start, _volume, _fadeTime, _target, _targetLabel] call zmp_fnc_play;
+        [format [localize "STR_ZMP_StatusFadeIn", _trackName, _fadeTime, _targetLabel]] call zmp_fnc_ui_setStatus;
     };
     case "fadeOutStop": {
-        ["fadeOut", _fadeTime, _volume] call zmp_fnc_stop;
-        [format [localize "STR_ZMP_StatusFadeOut", _fadeTime]] call zmp_fnc_ui_setStatus;
+        ["fadeOut", _fadeTime, _volume, _target] call zmp_fnc_stop;
+        [format [localize "STR_ZMP_StatusFadeOut", _fadeTime, _targetLabel]] call zmp_fnc_ui_setStatus;
     };
     case "fadeApply": {
-        [_fadeTime, _volume] call zmp_fnc_fade;
-        [format [localize "STR_ZMP_StatusFade", _volume, _fadeTime]] call zmp_fnc_ui_setStatus;
+        [_fadeTime, _volume, _target] call zmp_fnc_fade;
+        [format [localize "STR_ZMP_StatusFade", _volume, _fadeTime, _targetLabel]] call zmp_fnc_ui_setStatus;
     };
 };
 
