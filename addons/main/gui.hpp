@@ -345,19 +345,46 @@ class zmp_display {
             w = QUOTE(POS_W(5.5));
             colorBackground[] = {0.6, 0.12, 0.12, 1};
         };
-        class StartLabel: zmp_RscLabel {
-            text = "$STR_ZMP_StartAt";
+        // A 点 = 起始位置；填了 B 点后可以 AB 循环
+        class SetA: zmp_RscButton {
+            idc = IDC_ZMP_SET_A;
+            text = "A";
+            tooltip = "$STR_ZMP_SetATooltip";
             x = QUOTE(POS_X(25));
-            y = QUOTE(POS_Y(20.85));
-            w = QUOTE(POS_W(4.5));
+            y = QUOTE(POS_Y(20.8));
+            w = QUOTE(POS_W(1.6));
         };
         class Start: zmp_RscEdit {
             idc = IDC_ZMP_START;
             text = "0";
             tooltip = "$STR_ZMP_StartAtTooltip";
-            x = QUOTE(POS_X(29.6));
+            x = QUOTE(POS_X(26.7));
             y = QUOTE(POS_Y(20.85));
-            w = QUOTE(POS_W(2.4));
+            w = QUOTE(POS_W(2.6));
+        };
+        class SetB: zmp_RscButton {
+            idc = IDC_ZMP_SET_B;
+            text = "B";
+            tooltip = "$STR_ZMP_SetBTooltip";
+            x = QUOTE(POS_X(29.5));
+            y = QUOTE(POS_Y(20.8));
+            w = QUOTE(POS_W(1.6));
+        };
+        class LoopEnd: zmp_RscEdit {
+            idc = IDC_ZMP_LOOP_END;
+            tooltip = "$STR_ZMP_LoopEndTooltip";
+            x = QUOTE(POS_X(31.2));
+            y = QUOTE(POS_Y(20.85));
+            w = QUOTE(POS_W(2.6));
+        };
+        class ABLoop: zmp_RscButton {
+            idc = IDC_ZMP_AB_LOOP;
+            text = "$STR_ZMP_ABLoop";
+            tooltip = "$STR_ZMP_ABLoopTooltip";
+            x = QUOTE(POS_X(34));
+            y = QUOTE(POS_Y(20.8));
+            w = QUOTE(POS_W(4.5));
+            colorBackground[] = {0.2, 0.45, 0.6, 1};
         };
 
         // ---- 行 9：淡入淡出 ----

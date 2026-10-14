@@ -22,12 +22,14 @@ params [
 zmp_actionToken = zmp_actionToken + 1;
 
 if (_mode == "preview") exitWith {
+    missionNamespace setVariable ["zmp_abToken", ""];
     playMusic "";
     zmp_nowPlaying = [];
 };
 
 if (_mode == "fadeOut" && _fadeTime > 0) exitWith {
-    [[["fade", _fadeTime, 0]], _target] call zmp_fnc_broadcast;
+    // 先结束 AB 循环（否则循环跳回 A 点时会打断淡出），让这一段自然淡出
+    [[["endLoop"], ["fade", _fadeTime, 0]], _target] call zmp_fnc_broadcast;
 
     // 淡出完成后再停止；如果期间又有新的播放/停止操作，这次延时操作作废
     [{

@@ -18,15 +18,29 @@ if (_type == "start") exitWith {
         && {(zmp_nowPlaying select 0) == _class};
     zmp_pendingSource = ["", ""];
 
-    if (_fromUs) then {
+    private _sameTrack = zmp_nowPlaying isNotEqualTo [] && {(zmp_nowPlaying select 0) == _class};
+    private _looping = _sameTrack && {(zmp_nowPlaying param [6, []]) isNotEqualTo []};
+
+    switch (true) do {
+        // AB 循环每一圈都会重新 playMusic，保留原来的信息（进度按第一次开始时间换算）
+        case (_looping): {};
         // 本模组刚发出的播放：保留播放对象等信息，只校正开始时间
-        zmp_nowPlaying set [2, diag_tickTime];
-    } else {
-        zmp_nowPlaying = [_class, "other", diag_tickTime, "", true, 0];
+        case (_fromUs): {
+            zmp_nowPlaying set [2, diag_tickTime];
+        };
+        default {
+            zmp_nowPlaying = [_class, "other", diag_tickTime, "", true, 0, []];
+        };
     };
 };
 
 // stop：只有停掉的就是当前曲目时才清空（换歌时旧曲目的 stop 可能晚于新曲目的 start）
-if (zmp_nowPlaying isNotEqualTo [] && {(zmp_nowPlaying select 0) == _class} && {diag_tickTime - (zmp_nowPlaying select 2) > 0.5}) then {
+// AB 循环的每一圈也会触发 stop，循环由「停止」按钮结束，这里不清空
+if (
+    zmp_nowPlaying isNotEqualTo []
+    && {(zmp_nowPlaying select 0) == _class}
+    && {(zmp_nowPlaying param [6, []]) isEqualTo []}
+    && {diag_tickTime - (zmp_nowPlaying select 2) > 0.5}
+) then {
     zmp_nowPlaying = [];
 };
