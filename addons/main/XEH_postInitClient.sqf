@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 /*
  * 客户端初始化：入口（ZEN 模块 / ZEN 右键菜单 / CBA 快捷键）+ 音乐事件跟踪。
+ * 音乐播放器和时间 / 天气过渡各有一套入口。
  * 本模组只在 Zeus 自己的客户端加载，其他玩家不需要安装。
  */
 
@@ -24,6 +25,12 @@ addMusicEventHandler ["MusicStop", {["stop", _this] call zmp_fnc_onMusicEvent}];
     {[] call zmp_fnc_open},
     "\a3\ui_f\data\igui\cfg\simpleTasks\types\listen_ca.paa"
 ] call zen_custom_modules_fnc_register;
+[
+    localize "STR_ZMP_EnvModuleCategory",
+    localize "STR_ZMP_EnvModuleName",
+    {[] call zmp_fnc_env_open},
+    "\a3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa"
+] call zen_custom_modules_fnc_register;
 
 // ---- 入口 2：ZEN 右键菜单 ----
 private _action = [
@@ -31,6 +38,14 @@ private _action = [
     localize "STR_ZMP_ContextMenu",
     "\a3\ui_f\data\igui\cfg\simpleTasks\types\listen_ca.paa",
     {[] call zmp_fnc_open},
+    {call zmp_fnc_canOpen}
+] call zen_context_menu_fnc_createAction;
+[_action, [], 0] call zen_context_menu_fnc_addAction;
+_action = [
+    "zmp_openEnv",
+    localize "STR_ZMP_EnvContextMenu",
+    "\a3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa",
+    {[] call zmp_fnc_env_open},
     {call zmp_fnc_canOpen}
 ] call zen_context_menu_fnc_createAction;
 [_action, [], 0] call zen_context_menu_fnc_addAction;
@@ -50,4 +65,21 @@ private _action = [
     },
     "",
     [0x32, [true, true, false]] // DIK_M, [Shift, Ctrl, Alt]
+] call CBA_fnc_addKeybind;
+
+// 时间 / 天气过渡：默认 Ctrl+Shift+T
+[
+    "Zeus Music Player",
+    "zmp_openEnv",
+    [localize "STR_ZMP_KeybindOpenEnv", localize "STR_ZMP_KeybindOpenEnvTooltip"],
+    {
+        if (call zmp_fnc_canOpen) then {
+            [] call zmp_fnc_env_open;
+            true
+        } else {
+            false
+        };
+    },
+    "",
+    [0x14, [true, true, false]] // DIK_T, [Shift, Ctrl, Alt]
 ] call CBA_fnc_addKeybind;
