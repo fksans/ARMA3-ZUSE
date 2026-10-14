@@ -62,9 +62,9 @@
             <Chinesesimp>淡变到目标音量</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeApplyTooltip">
-            <Original>[时长, 音量] remoteExec ["fadeMusic", 0]</Original>
-            <English>[time, volume] remoteExec ["fadeMusic", 0]</English>
-            <Chinesesimp>[时长, 音量] remoteExec ["fadeMusic", 0]</Chinesesimp>
+            <Original>不换歌，全队在「淡变时长」内把音量调到「目标音量」</Original>
+            <English>Keep the track; fade everyone's music to the target volume over the fade time</English>
+            <Chinesesimp>不换歌，全队在「淡变时长」内把音量调到「目标音量」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeInPlay">
             <Original>淡入播放(全队)</Original>
@@ -212,9 +212,9 @@
             <Chinesesimp>全队播放</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_PlayAllTooltip">
-            <Original>[类名] remoteExec ["playMusic", 0]：所有玩家（包括你）播放。播放前会把全队音量设为「目标音量」。</Original>
-            <English>[class] remoteExec ["playMusic", 0]: everyone (including you) plays it. Music volume is first set to the target volume.</English>
-            <Chinesesimp>[类名] remoteExec ["playMusic", 0]：所有玩家（包括你）播放。播放前会把全队音量设为「目标音量」。</Chinesesimp>
+            <Original>所有玩家（包括你）播放选中的曲目。播放前会把全队音量设为「目标音量」。</Original>
+            <English>Everyone (including you) plays the selected track. Music volume is first set to the target volume.</English>
+            <Chinesesimp>所有玩家（包括你）播放选中的曲目。播放前会把全队音量设为「目标音量」。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Preview">
             <Original>试听</Original>
@@ -242,9 +242,9 @@
             <Chinesesimp>【警告】全队播放可能被服务器拦截！%1 中 Commands mode = 0（禁止所有远程命令）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckLimits">
-            <Original>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，请让服务器管理员把 playMusic / fadeMusic 加入 CfgRemoteExec &gt;&gt; Commands 白名单。</Original>
-            <English>Only configs visible on your machine can be checked (mission description.ext and locally loaded mods).\nServer-only mods and BattlEye remoteexec.txt filters cannot be detected.\nIf nobody hears the music, ask the server admin to whitelist playMusic / fadeMusic in CfgRemoteExec &gt;&gt; Commands.</English>
-            <Chinesesimp>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，请让服务器管理员把 playMusic / fadeMusic 加入 CfgRemoteExec &gt;&gt; Commands 白名单。</Chinesesimp>
+            <Original>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，把 ESC → 选项 → 插件设置 → Zeus Music Player 的「全队播放方式」改回「ZEN 事件」。</Original>
+            <English>Only configs visible on your machine can be checked (mission description.ext and locally loaded mods).\nServer-only mods and BattlEye remoteexec.txt filters cannot be detected.\nIf nobody hears the music, set Broadcast method back to "ZEN event" in ESC → Options → Addon Options → Zeus Music Player.</English>
+            <Chinesesimp>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，把 ESC → 选项 → 插件设置 → Zeus Music Player 的「全队播放方式」改回「ZEN 事件」。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckNotDefined">
             <Original>远程执行自检通过：未定义 CfgRemoteExec（默认允许），全队播放可用</Original>
@@ -265,6 +265,16 @@
             <Original>远程执行自检通过：%1 为白名单模式，已包含 playMusic / fadeMusic</Original>
             <English>RemoteExec check OK: %1 is in whitelist mode and contains playMusic / fadeMusic</English>
             <Chinesesimp>远程执行自检通过：%1 为白名单模式，已包含 playMusic / fadeMusic</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckZenEvent">
+            <Original>全队播放走 ZEN 事件通道，不受 CfgRemoteExec 白名单限制</Original>
+            <English>Broadcasting through ZEN events; not affected by the CfgRemoteExec whitelist</English>
+            <Chinesesimp>全队播放走 ZEN 事件通道，不受 CfgRemoteExec 白名单限制</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_RECheckZenEventTooltip">
+            <Original>播放命令通过 ZEN 的 zen_common_execute 事件发给所有玩家，和 ZEN 自己的模块用的是同一条通道。\n可以在 ESC → 选项 → 插件设置 → Zeus Music Player 里切换成 remoteExec 方式。</Original>
+            <English>Commands are sent to every player through ZEN's zen_common_execute event, the same channel ZEN's own modules use.\nYou can switch to remoteExec in ESC → Options → Addon Options → Zeus Music Player.</English>
+            <Chinesesimp>播放命令通过 ZEN 的 zen_common_execute 事件发给所有玩家，和 ZEN 自己的模块用的是同一条通道。\n可以在 ESC → 选项 → 插件设置 → Zeus Music Player 里切换成 remoteExec 方式。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RemoveFavorite">
             <Original>取消收藏</Original>
@@ -290,6 +300,16 @@
             <Original>请先在列表中选择一首曲目</Original>
             <English>Select a track in the list first</English>
             <Chinesesimp>请先在列表中选择一首曲目</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SettingTransport">
+            <Original>全队播放方式</Original>
+            <English>Broadcast method</English>
+            <Chinesesimp>全队播放方式</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SettingTransportTooltip">
+            <Original>ZEN 事件（推荐）：通过所有玩家都装了的 ZEN 发送，不受服务器 CfgRemoteExec 白名单限制。\nremoteExec：直接 remoteExec 引擎命令 playMusic / fadeMusic，可能被服务器拦截。</Original>
+            <English>ZEN event (recommended): sent through ZEN, which every player has; not affected by the server's CfgRemoteExec whitelist.\nremoteExec: remoteExec the engine commands playMusic / fadeMusic directly; may be blocked by the server.</English>
+            <Chinesesimp>ZEN 事件（推荐）：通过所有玩家都装了的 ZEN 发送，不受服务器 CfgRemoteExec 白名单限制。\nremoteExec：直接 remoteExec 引擎命令 playMusic / fadeMusic，可能被服务器拦截。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SourceGlobal">
             <Original>全队</Original>
@@ -402,9 +422,9 @@
             <Chinesesimp>全队停止</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StopAllTooltip">
-            <Original>[""] remoteExec ["playMusic", 0]</Original>
-            <English>[""] remoteExec ["playMusic", 0]</English>
-            <Chinesesimp>[""] remoteExec ["playMusic", 0]</Chinesesimp>
+            <Original>所有玩家立刻停止音乐</Original>
+            <English>Stop the music for everyone immediately</English>
+            <Chinesesimp>所有玩家立刻停止音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TabAll">
             <Original>全部</Original>
@@ -420,6 +440,16 @@
             <Original>Zeus 音乐播放器</Original>
             <English>Zeus Music Player</English>
             <Chinesesimp>Zeus 音乐播放器</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TransportRemoteExec">
+            <Original>remoteExec 引擎命令</Original>
+            <English>remoteExec engine commands</English>
+            <Chinesesimp>remoteExec 引擎命令</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TransportZen">
+            <Original>ZEN 事件（推荐）</Original>
+            <English>ZEN event (recommended)</English>
+            <Chinesesimp>ZEN 事件（推荐）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Ungrouped">
             <Original>未分组</Original>

@@ -1,6 +1,9 @@
 #include "..\script_component.hpp"
 /*
- * 自检：检查 CfgRemoteExec >> Commands 是否允许 playMusic / fadeMusic。
+ * 自检：全队播放会不会被服务器拦截。
+ *
+ * 默认通过 ZEN 事件广播（见 fn_broadcast），不经过 remoteExec，不受 CfgRemoteExec 影响。
+ * 只有在设置里改成 remoteExec 方式时，才检查 CfgRemoteExec >> Commands 是否允许 playMusic / fadeMusic。
  * 任务 description.ext（missionConfigFile）中定义了 CfgRemoteExec 时优先，否则看 configFile。
  *
  * mode: 0 = 全部禁止, 1 = 白名单, 2 = 全部允许（默认）
@@ -12,6 +15,10 @@
  * Return Value:
  * [是否正常 <BOOL>, 显示文本 <STRING>, 详细说明（tooltip） <STRING>]
  */
+
+if (missionNamespace getVariable ["zmp_transport", 0] != 1) exitWith {
+    [true, localize "STR_ZMP_RECheckZenEvent", localize "STR_ZMP_RECheckZenEventTooltip"]
+};
 
 private _commands = ["playMusic", "fadeMusic"];
 

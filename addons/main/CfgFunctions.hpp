@@ -14,7 +14,8 @@ class CfgFunctions {
             class getGroups {};
             class setGroups {};
             class profileSave {};
-            // 播放控制（只 remoteExec 引擎命令）
+            // 播放控制（全队只执行引擎命令，见 fn_broadcast）
+            class broadcast {};
             class play {};
             class stop {};
             class fade {};
