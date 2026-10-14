@@ -208,11 +208,19 @@ HEMTT 有两种签名方式，二选一：
 `.github/workflows/build.yml` 做两件事：
 
 - **推到 main / 提 PR**：运行 `hemtt check`，有错误会在 PR 上标红。
-- **推 `v*` 标签**：运行 `hemtt release` 构建并签名，然后在 GitHub **Releases** 页面创建一个版本，附上两个文件：
+- **推 `v*` 标签，或在 Actions 页面手动运行**：运行 `hemtt release` 构建并签名，然后在 GitHub **Releases** 页面创建一个版本，附上两个文件：
   - `zmp-<版本>.zip`：给 Zeus 玩家下载，解压就是 `@zeus_music_player`
   - `zmp_<版本>.bikey`：给服务器腐竹
 
-发新版本的步骤：
+发新版本有两种方式。
+
+**方式一：网页上点按钮（最简单）**
+
+1. 改 `addons/main/script_version.hpp` 里的版本号，比如改成 `1.0.1`，提交并推到 main。
+2. 打开仓库的 **Actions** 页签 → 左侧选 **Build** → 右侧点 **Run workflow** → 分支选 `main` → 点绿色的 **Run workflow**。
+3. 等几分钟，工作流会自动创建 `v1.0.1` 标签和 Release。如果这个版本号已经发布过，会直接报错，提醒你先改版本号。
+
+**方式二：自己打标签**
 
 1. 改 `addons/main/script_version.hpp` 里的版本号，比如改成 `1.0.1`，提交并推到 main。
 2. 打一个**和版本号一致**的标签并推上去：
