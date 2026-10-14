@@ -10,7 +10,7 @@
 
 ```
 @zeus_music_player/keys/zmp.bikey          ← 作者用了固定 key 时的文件名
-@zeus_music_player/keys/zmp_1.2.1.bikey    ← 默认方式（每个版本一把 key）时的文件名
+@zeus_music_player/keys/zmp_1.3.0.bikey    ← 默认方式（每个版本一把 key）时的文件名
 ```
 
 > `.bikey` 是公钥，可以随便传。**不要**接收也不要索要 `.biprivatekey` / `.hemttprivatekey`，那是作者的私钥。

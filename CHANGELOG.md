@@ -3,7 +3,11 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [1.2.1]
+## [1.3.0]
+
+### Added
+
+- Time / weather transition tool: skip to a time of day or forward N hours as a smooth time-lapse over a chosen number of seconds, with overcast, fog, rain, wind, lightning and waves changing along the same timeline. Opens from a ZEN module, the ZEN right-click menu or a CBA keybind (default Ctrl+Shift+T).
 
 ### Changed
 

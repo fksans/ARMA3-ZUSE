@@ -237,7 +237,7 @@ HEMTT 有两种签名方式，二选一：
 
 **A. 默认：每个版本一把新 key（零配置）**
 
-`hemtt release` 每次随机生成私钥签名后就丢弃，authority 为 `zmp_<版本号>`，例如 `zmp_1.2.1.bikey`。
+`hemtt release` 每次随机生成私钥签名后就丢弃，authority 为 `zmp_<版本号>`，例如 `zmp_1.3.0.bikey`。
 私钥从不落盘，最安全；但**每发一个新版本，服务器都要换一次 `.bikey`**（旧 key 可以删掉）。
 
 **B. 推荐：固定 key（服务器只装一次）**
