@@ -13,7 +13,7 @@ if (_nowPlaying isEqualTo []) exitWith {
     _ctrl ctrlSetText localize "STR_ZMP_NowPlayingNone";
 };
 
-_nowPlaying params ["_class", "_source"];
+_nowPlaying params ["_class", "_source", ["_startTick", diag_tickTime], ["_targetLabel", ""], ["_local", true], ["_startOffset", 0]];
 
 private _track = ((call zmp_fnc_getLibrary) select 1) getOrDefault [toLower _class, []];
 private _name = _class;
@@ -23,7 +23,8 @@ if (_track isNotEqualTo []) then {
     _duration = _track select 3;
 };
 
-private _elapsed = getMusicPlayedTime;
+// Zeus 自己不在播放对象里时本机没有音乐，只能按开始时间估算进度
+private _elapsed = [diag_tickTime - _startTick + _startOffset, getMusicPlayedTime] select _local;
 
 // 没收到 MusicStop 也能识别自然播完
 if (_duration > 0 && {_elapsed > _duration + 2}) exitWith {
@@ -31,11 +32,11 @@ if (_duration > 0 && {_elapsed > _duration + 2}) exitWith {
     _ctrl ctrlSetText localize "STR_ZMP_NowPlayingNone";
 };
 
-private _sourceText = localize (switch (_source) do {
-    case "global": {"STR_ZMP_SourceGlobal"};
-    case "preview": {"STR_ZMP_SourcePreview"};
-    default {"STR_ZMP_SourceOther"};
-});
+private _sourceText = switch (_source) do {
+    case "global": {format [localize "STR_ZMP_SourceGlobal", _targetLabel]};
+    case "preview": {localize "STR_ZMP_SourcePreview"};
+    default {localize "STR_ZMP_SourceOther"};
+};
 
 _ctrl ctrlSetText format [
     localize "STR_ZMP_NowPlayingFormat",

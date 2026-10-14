@@ -16,6 +16,7 @@ class CfgFunctions {
             class profileSave {};
             // 播放控制（全队只执行引擎命令，见 fn_broadcast）
             class broadcast {};
+            class targetMatches {};
             class play {};
             class stop {};
             class fade {};
@@ -35,6 +36,8 @@ class CfgFunctions {
             class ui_setStatus {};
             class ui_getSelected {};
             class ui_readPlaybackParams {};
+            class ui_readTarget {};
+            class ui_refreshTargets {};
         };
     };
 };

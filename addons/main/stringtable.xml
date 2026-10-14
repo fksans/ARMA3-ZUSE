@@ -62,29 +62,29 @@
             <Chinesesimp>淡变到目标音量</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeApplyTooltip">
-            <Original>不换歌，全队在「淡变时长」内把音量调到「目标音量」</Original>
-            <English>Keep the track; fade everyone's music to the target volume over the fade time</English>
-            <Chinesesimp>不换歌，全队在「淡变时长」内把音量调到「目标音量」</Chinesesimp>
+            <Original>发给「播放对象」：不换歌，在「淡变时长」内把音量调到「目标音量」</Original>
+            <English>Send to the target: keep the track, fade the volume to the target volume over the fade time</English>
+            <Chinesesimp>发给「播放对象」：不换歌，在「淡变时长」内把音量调到「目标音量」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeInPlay">
-            <Original>淡入播放(全队)</Original>
-            <English>Fade in (all)</English>
-            <Chinesesimp>淡入播放(全队)</Chinesesimp>
+            <Original>淡入播放</Original>
+            <English>Fade in</English>
+            <Chinesesimp>淡入播放</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeInPlayTooltip">
-            <Original>全队：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Original>
-            <English>All players: volume to 0 -&gt; play -&gt; fade to the target volume over the fade time</English>
-            <Chinesesimp>全队：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Chinesesimp>
+            <Original>发给「播放对象」：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Original>
+            <English>Send to the target: volume to 0 -&gt; play -&gt; fade to the target volume over the fade time</English>
+            <Chinesesimp>发给「播放对象」：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeOutStop">
-            <Original>淡出停止(全队)</Original>
-            <English>Fade out (all)</English>
-            <Chinesesimp>淡出停止(全队)</Chinesesimp>
+            <Original>淡出停止</Original>
+            <English>Fade out</English>
+            <Chinesesimp>淡出停止</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeOutStopTooltip">
-            <Original>全队在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Original>
-            <English>All players fade to 0 over the fade time, then music stops and volume is restored to the target volume</English>
-            <Chinesesimp>全队在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Chinesesimp>
+            <Original>发给「播放对象」：在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Original>
+            <English>Send to the target: fade to 0 over the fade time, then stop and restore the volume</English>
+            <Chinesesimp>发给「播放对象」：在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeTime">
             <Original>淡变时长(秒)</Original>
@@ -132,9 +132,19 @@
             <Chinesesimp>已收藏曲目：选择后立即修改分组；未收藏曲目：点「收藏」时放入该分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_HintMusicVolume">
-            <Original>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。「全队」包括你自己；试听只在你本机播放。</Original>
-            <English>&lt;t color='#ffcc66'&gt;Note:&lt;/t&gt; playMusic is affected by each player's own Options → Audio → Music volume; players with music volume 0 hear nothing. "All" includes you; preview is local only.</English>
-            <Chinesesimp>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。「全队」包括你自己；试听只在你本机播放。</Chinesesimp>
+            <Original>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。试听只在你本机播放。</Original>
+            <English>&lt;t color='#ffcc66'&gt;Note:&lt;/t&gt; playMusic is affected by each player's own Options → Audio → Music volume; players with music volume 0 hear nothing. Preview is local only.</English>
+            <Chinesesimp>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。试听只在你本机播放。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_IncludeSelf">
+            <Original>我自己也听</Original>
+            <English>I listen too</English>
+            <Chinesesimp>我自己也听</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_IncludeSelfTooltip">
+            <Original>勾选后，即使你不在播放对象里，你自己也会听到（方便监听）</Original>
+            <English>When checked, you also hear it even if you are not in the target (for monitoring)</English>
+            <Chinesesimp>勾选后，即使你不在播放对象里，你自己也会听到（方便监听）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_InfoFormat">
             <Original>选中：%1  [%2]  来源：%3</Original>
@@ -207,14 +217,14 @@
             <Chinesesimp>正在播放：（无）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_PlayAll">
-            <Original>全队播放</Original>
-            <English>Play for all</English>
-            <Chinesesimp>全队播放</Chinesesimp>
+            <Original>播放</Original>
+            <English>Play</English>
+            <Chinesesimp>播放</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_PlayAllTooltip">
-            <Original>所有玩家（包括你）播放选中的曲目。播放前会把全队音量设为「目标音量」。</Original>
-            <English>Everyone (including you) plays the selected track. Music volume is first set to the target volume.</English>
-            <Chinesesimp>所有玩家（包括你）播放选中的曲目。播放前会把全队音量设为「目标音量」。</Chinesesimp>
+            <Original>发给「播放对象」：播放选中的曲目。播放前会把对方的音乐音量设为「目标音量」。</Original>
+            <English>Send to the target: play the selected track. Music volume is first set to the target volume.</English>
+            <Chinesesimp>发给「播放对象」：播放选中的曲目。播放前会把对方的音乐音量设为「目标音量」。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Preview">
             <Original>试听</Original>
@@ -311,10 +321,30 @@
             <English>ZEN event (recommended): sent through ZEN, which every player has; not affected by the server's CfgRemoteExec whitelist.\nremoteExec: remoteExec the engine commands playMusic / fadeMusic directly; may be blocked by the server.</English>
             <Chinesesimp>ZEN 事件（推荐）：通过所有玩家都装了的 ZEN 发送，不受服务器 CfgRemoteExec 白名单限制。\nremoteExec：直接 remoteExec 引擎命令 playMusic / fadeMusic，可能被服务器拦截。</Chinesesimp>
         </Key>
+        <Key ID="STR_ZMP_SideCiv">
+            <Original>平民</Original>
+            <English>Civilian</English>
+            <Chinesesimp>平民</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SideEast">
+            <Original>OPFOR</Original>
+            <English>OPFOR</English>
+            <Chinesesimp>OPFOR</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SideGuer">
+            <Original>独立</Original>
+            <English>Independent</English>
+            <Chinesesimp>独立</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_SideWest">
+            <Original>BLUFOR</Original>
+            <English>BLUFOR</English>
+            <Chinesesimp>BLUFOR</Chinesesimp>
+        </Key>
         <Key ID="STR_ZMP_SourceGlobal">
-            <Original>全队</Original>
-            <English>all players</English>
-            <Chinesesimp>全队</Chinesesimp>
+            <Original>发给：%1</Original>
+            <English>to: %1</English>
+            <Chinesesimp>发给：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SourceOther">
             <Original>其他来源（任务脚本 / 其他 Zeus）</Original>
@@ -337,19 +367,19 @@
             <Chinesesimp>从第几秒开始播放（0 = 从头）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFade">
-            <Original>全队音量 → %1（%2 秒）</Original>
-            <English>Music volume for all -&gt; %1 (%2 s)</English>
-            <Chinesesimp>全队音量 → %1（%2 秒）</Chinesesimp>
+            <Original>「%3」音量 → %1（%2 秒）</Original>
+            <English>Volume for "%3" -&gt; %1 (%2 s)</English>
+            <Chinesesimp>「%3」音量 → %1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFadeIn">
-            <Original>全队淡入播放：%1（%2 秒）</Original>
-            <English>Fading in for all: %1 (%2 s)</English>
-            <Chinesesimp>全队淡入播放：%1（%2 秒）</Chinesesimp>
+            <Original>向「%3」淡入播放：%1（%2 秒）</Original>
+            <English>Fading in for "%3": %1 (%2 s)</English>
+            <Chinesesimp>向「%3」淡入播放：%1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFadeOut">
-            <Original>全队淡出中，%1 秒后停止</Original>
-            <English>Fading out for all, stopping in %1 s</English>
-            <Chinesesimp>全队淡出中，%1 秒后停止</Chinesesimp>
+            <Original>「%2」淡出中，%1 秒后停止</Original>
+            <English>Fading out for "%2", stopping in %1 s</English>
+            <Chinesesimp>「%2」淡出中，%1 秒后停止</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFavorited">
             <Original>已收藏：%1</Original>
@@ -381,6 +411,16 @@
             <English>Pick the group to delete in the group filter (Favorites tab) first</English>
             <Chinesesimp>请先在「收藏」页签的分组筛选中选择要删除的分组</Chinesesimp>
         </Key>
+        <Key ID="STR_ZMP_StatusNoCuratorSelection">
+            <Original>Zeus 界面里没有选中任何单位，先在 Zeus 里选中单位或小队</Original>
+            <English>Nothing is selected in Zeus; select units or squads first</English>
+            <Chinesesimp>Zeus 界面里没有选中任何单位，先在 Zeus 里选中单位或小队</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusNoPlayersSelected">
+            <Original>选中的单位里没有玩家</Original>
+            <English>None of the selected units is a player</English>
+            <Chinesesimp>选中的单位里没有玩家</Chinesesimp>
+        </Key>
         <Key ID="STR_ZMP_StatusNoteSaved">
             <Original>备注已保存</Original>
             <English>Note saved</English>
@@ -392,9 +432,9 @@
             <Chinesesimp>备注已保存（已自动加入收藏）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusPlayAll">
-            <Original>已向全体玩家播放：%1</Original>
-            <English>Playing for all players: %1</English>
-            <Chinesesimp>已向全体玩家播放：%1</Chinesesimp>
+            <Original>已向「%2」播放：%1</Original>
+            <English>Playing for "%2": %1</English>
+            <Chinesesimp>已向「%2」播放：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusPreview">
             <Original>试听（仅本机）：%1</Original>
@@ -407,9 +447,19 @@
             <Chinesesimp>已停止本机音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusStopAll">
-            <Original>已停止全体玩家的音乐</Original>
-            <English>Music stopped for all players</English>
-            <Chinesesimp>已停止全体玩家的音乐</Chinesesimp>
+            <Original>已停止「%1」的音乐</Original>
+            <English>Music stopped for "%1"</English>
+            <Chinesesimp>已停止「%1」的音乐</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusTargetInvalid">
+            <Original>播放对象无效，请点「刷新」后重新选择</Original>
+            <English>Invalid target; click Refresh and pick again</English>
+            <Chinesesimp>播放对象无效，请点「刷新」后重新选择</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_StatusTargetsRefreshed">
+            <Original>已刷新播放对象列表</Original>
+            <English>Target list refreshed</English>
+            <Chinesesimp>已刷新播放对象列表</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusUnfavorited">
             <Original>已取消收藏：%1</Original>
@@ -417,14 +467,14 @@
             <Chinesesimp>已取消收藏：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StopAll">
-            <Original>全队停止</Original>
-            <English>Stop for all</English>
-            <Chinesesimp>全队停止</Chinesesimp>
+            <Original>停止</Original>
+            <English>Stop</English>
+            <Chinesesimp>停止</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StopAllTooltip">
-            <Original>所有玩家立刻停止音乐</Original>
-            <English>Stop the music for everyone immediately</English>
-            <Chinesesimp>所有玩家立刻停止音乐</Chinesesimp>
+            <Original>发给「播放对象」：立刻停止音乐</Original>
+            <English>Send to the target: stop the music immediately</English>
+            <Chinesesimp>发给「播放对象」：立刻停止音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TabAll">
             <Original>全部</Original>
@@ -435,6 +485,66 @@
             <Original>收藏</Original>
             <English>Favorites</English>
             <Chinesesimp>收藏</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_Target">
+            <Original>播放对象</Original>
+            <English>Play to</English>
+            <Chinesesimp>播放对象</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetAll">
+            <Original>全体玩家</Original>
+            <English>All players</English>
+            <Chinesesimp>全体玩家</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetGroup">
+            <Original>小队：%1 · %2 · %3 名玩家</Original>
+            <English>Squad: %1 · %2 · %3 players</English>
+            <Chinesesimp>小队：%1 · %2 · %3 名玩家</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetRefresh">
+            <Original>刷新</Original>
+            <English>Refresh</English>
+            <Chinesesimp>刷新</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetRefreshTooltip">
+            <Original>重新读取在线玩家和小队列表</Original>
+            <English>Reload the list of players and squads</English>
+            <Chinesesimp>重新读取在线玩家和小队列表</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetSelectedGroups">
+            <Original>Zeus 选中的单位所在小队</Original>
+            <English>Squads of units selected in Zeus</English>
+            <Chinesesimp>Zeus 选中的单位所在小队</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetSelectedGroupsLabel">
+            <Original>选中的 %1 个小队（%2 名玩家）</Original>
+            <English>%1 selected squads (%2 players)</English>
+            <Chinesesimp>选中的 %1 个小队（%2 名玩家）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetSelectedUnits">
+            <Original>Zeus 选中的单位</Original>
+            <English>Units selected in Zeus</English>
+            <Chinesesimp>Zeus 选中的单位</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetSelectedUnitsLabel">
+            <Original>选中的 %1 个单位（%2 名玩家）</Original>
+            <English>%1 selected units (%2 players)</English>
+            <Chinesesimp>选中的 %1 个单位（%2 名玩家）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetSide">
+            <Original>阵营：%1（%2 名玩家）</Original>
+            <English>Side: %1 (%2 players)</English>
+            <Chinesesimp>阵营：%1（%2 名玩家）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetTooltip">
+            <Original>「播放」「停止」「淡入」「淡出」「淡变」只发给这里选的人。\n选「Zeus 选中的…」时，用的是你在 Zeus 界面里当前选中的单位（点按钮那一刻读取）。</Original>
+            <English>Play / Stop / Fade only go to the players chosen here.\n"Zeus selection" uses the units selected in the Zeus interface at the moment you click.</English>
+            <Chinesesimp>「播放」「停止」「淡入」「淡出」「淡变」只发给这里选的人。\n选「Zeus 选中的…」时，用的是你在 Zeus 界面里当前选中的单位（点按钮那一刻读取）。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ZMP_TargetUnit">
+            <Original>玩家：%1 · %2</Original>
+            <English>Player: %1 · %2</English>
+            <Chinesesimp>玩家：%1 · %2</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Title">
             <Original>Zeus 音乐播放器</Original>

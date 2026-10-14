@@ -12,6 +12,8 @@
  * 2: 起始位置（秒） <NUMBER>
  * 3: 音量 0..1 <NUMBER>
  * 4: 淡入时长（秒，仅 fadeIn） <NUMBER>
+ * 5: 播放对象 <ARRAY>（见 zmp_fnc_broadcast，default: 全体玩家）
+ * 6: 播放对象的显示名（用于「正在播放」） <STRING>
  */
 
 params [
@@ -19,7 +21,9 @@ params [
     ["_mode", "global", [""]],
     ["_start", 0, [0]],
     ["_volume", 1, [0]],
-    ["_fadeTime", 0, [0]]
+    ["_fadeTime", 0, [0]],
+    ["_target", [["all"], objNull], [[]]],
+    ["_targetLabel", "", [""]]
 ];
 
 if (_class == "") exitWith {};
@@ -30,18 +34,20 @@ zmp_actionToken = zmp_actionToken + 1;
 
 if (_mode == "preview") exitWith {
     zmp_pendingSource = [toLower _class, "preview"];
-    zmp_nowPlaying = [_class, "preview", diag_tickTime];
+    zmp_nowPlaying = [_class, "preview", diag_tickTime, "", true, _start];
 
     0 fadeMusic _volume;
     playMusic _arg;
 };
 
-zmp_pendingSource = [toLower _class, "global"];
-zmp_nowPlaying = [_class, "global", diag_tickTime];
+// Zeus 自己不在播放对象里时，本机不会播放，进度只能按时间估算
+private _local = [_target] call zmp_fnc_targetMatches;
+zmp_pendingSource = [["", toLower _class] select _local, "global"];
+zmp_nowPlaying = [_class, "global", diag_tickTime, _targetLabel, _local, _start];
 
 if (_mode == "fadeIn") then {
-    [[["fade", 0, 0], ["play", _arg], ["fade", _fadeTime, _volume]]] call zmp_fnc_broadcast;
+    [[["fade", 0, 0], ["play", _arg], ["fade", _fadeTime, _volume]], _target] call zmp_fnc_broadcast;
 } else {
     // 先把音量恢复到目标值：之前若淡出到 0，不复位的话新曲子会是静音
-    [[["fade", 0, _volume], ["play", _arg]]] call zmp_fnc_broadcast;
+    [[["fade", 0, _volume], ["play", _arg]], _target] call zmp_fnc_broadcast;
 };
