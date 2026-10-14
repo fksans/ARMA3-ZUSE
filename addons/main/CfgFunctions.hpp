@@ -23,21 +23,10 @@ class CfgFunctions {
             class stop {};
             class fade {};
             class onMusicEvent {};
-            // 时间 / 天气过渡（所有机器执行，见 fn_env_transition）
-            class env_open {};
-            class env_transition {};
-            class env_ui_onLoad {};
-            class env_ui_onUnload {};
-            class env_ui_action {};
-            class env_ui_update {};
-            class env_ui_readParams {};
-            class env_ui_setStatus {};
             // 自检
             class checkRemoteExec {};
             // 工具
             class formatTime {};
-            class formatClock {};
-            class parseClock {};
             // 界面
             class ui_action {};
             class ui_onLoad {};
