@@ -2,692 +2,692 @@
 <Project name="ZMP">
     <Package name="main">
         <Key ID="STR_ZMP_ABLoop">
-            <Original>AB 循环</Original>
+            <Original>A-B loop</Original>
             <English>A-B loop</English>
             <Chinesesimp>AB 循环</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_ABLoopTooltip">
-            <Original>发给「播放对象」：从 A 点播到 B 点后跳回 A 点，一直循环（接缝处有很短的淡出淡入）。\n点「播放」「停止」或「淡出停止」都会结束循环。</Original>
+            <Original>Send to the target: play from A to B, then jump back to A, forever (with a very short fade at the seam).\nPlay, Stop or Fade out ends the loop.</Original>
             <English>Send to the target: play from A to B, then jump back to A, forever (with a very short fade at the seam).\nPlay, Stop or Fade out ends the loop.</English>
             <Chinesesimp>发给「播放对象」：从 A 点播到 B 点后跳回 A 点，一直循环（接缝处有很短的淡出淡入）。\n点「播放」「停止」或「淡出停止」都会结束循环。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_AddFavorite">
-            <Original>★ 收藏</Original>
+            <Original>★ Favorite</Original>
             <English>★ Favorite</English>
             <Chinesesimp>★ 收藏</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_AddGroup">
-            <Original>添加分组</Original>
+            <Original>Add group</Original>
             <English>Add group</English>
             <Chinesesimp>添加分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_All">
-            <Original>全部</Original>
+            <Original>All</Original>
             <English>All</English>
             <Chinesesimp>全部</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_AllGroups">
-            <Original>全部分组</Original>
+            <Original>All groups</Original>
             <English>All groups</English>
             <Chinesesimp>全部分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Close">
-            <Original>关闭</Original>
+            <Original>Close</Original>
             <English>Close</English>
             <Chinesesimp>关闭</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_ColDuration">
-            <Original>时长</Original>
+            <Original>Length</Original>
             <English>Length</English>
             <Chinesesimp>时长</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_ColName">
-            <Original>名称</Original>
+            <Original>Name</Original>
             <English>Name</English>
             <Chinesesimp>名称</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_ContextMenu">
-            <Original>音乐播放器</Original>
+            <Original>Music Player</Original>
             <English>Music Player</English>
             <Chinesesimp>音乐播放器</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_CountFormat">
-            <Original>曲库 %1 首 · 当前显示 %2 首 · 已收藏 %3 首</Original>
+            <Original>Library: %1 · Shown: %2 · Favorites: %3</Original>
             <English>Library: %1 · Shown: %2 · Favorites: %3</English>
             <Chinesesimp>曲库 %1 首 · 当前显示 %2 首 · 已收藏 %3 首</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_DeleteGroup">
-            <Original>删除分组</Original>
+            <Original>Delete group</Original>
             <English>Delete group</English>
             <Chinesesimp>删除分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_DeleteGroupTooltip">
-            <Original>删除上方「分组」筛选框中选中的分组，组内曲目移到「未分组」</Original>
+            <Original>Deletes the group selected in the group filter above. Its tracks become ungrouped.</Original>
             <English>Deletes the group selected in the group filter above. Its tracks become ungrouped.</English>
             <Chinesesimp>删除上方「分组」筛选框中选中的分组，组内曲目移到「未分组」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvContextMenu">
-            <Original>时间 / 天气过渡</Original>
+            <Original>Time / weather transition</Original>
             <English>Time / weather transition</English>
             <Chinesesimp>时间 / 天气过渡</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvCurrent">
-            <Original>现在 %1 · 云 %2 · 雾 %3 · 雨 %4 · 风 %5 · 闪电 %6 · 浪 %7</Original>
+            <Original>Now %1 · Clouds %2 · Fog %3 · Rain %4 · Wind %5 · Lightning %6 · Waves %7</Original>
             <English>Now %1 · Clouds %2 · Fog %3 · Rain %4 · Wind %5 · Lightning %6 · Waves %7</English>
             <Chinesesimp>现在 %1 · 云 %2 · 雾 %3 · 雨 %4 · 风 %5 · 闪电 %6 · 浪 %7</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvDuration">
-            <Original>过渡时长(秒)</Original>
+            <Original>Duration (s)</Original>
             <English>Duration (s)</English>
             <Chinesesimp>过渡时长(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvDurationTooltip">
-            <Original>现实时间里这次过渡用多少秒（1-600）。跳 12 小时用 20 秒，太阳就会在 20 秒内平滑地走过去。</Original>
+            <Original>Real seconds the transition takes (1-600). Skipping 12 hours over 20 s moves the sun smoothly across the sky in 20 s.</Original>
             <English>Real seconds the transition takes (1-600). Skipping 12 hours over 20 s moves the sun smoothly across the sky in 20 s.</English>
             <Chinesesimp>现实时间里这次过渡用多少秒（1-600）。跳 12 小时用 20 秒，太阳就会在 20 秒内平滑地走过去。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvEase">
-            <Original>曲线</Original>
+            <Original>Curve</Original>
             <English>Curve</English>
             <Chinesesimp>曲线</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvEaseInOut">
-            <Original>缓入缓出</Original>
+            <Original>Ease in / out</Original>
             <English>Ease in / out</English>
             <Chinesesimp>缓入缓出</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvEaseLinear">
-            <Original>匀速</Original>
+            <Original>Linear</Original>
             <English>Linear</English>
             <Chinesesimp>匀速</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvEaseTooltip">
-            <Original>缓入缓出：开头和结尾慢、中间快，看起来更自然。</Original>
+            <Original>Ease in/out: slow at the start and end, fast in the middle; looks more natural.</Original>
             <English>Ease in/out: slow at the start and end, fast in the middle; looks more natural.</English>
             <Chinesesimp>缓入缓出：开头和结尾慢、中间快，看起来更自然。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvErrorDuration">
-            <Original>过渡时长要在 1-600 秒之间</Original>
+            <Original>Duration must be 1-600 seconds</Original>
             <English>Duration must be 1-600 seconds</English>
             <Chinesesimp>过渡时长要在 1-600 秒之间</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvErrorNothing">
-            <Original>时间不变，也没有勾选天气，没有要过渡的内容</Original>
+            <Original>Time unchanged and no weather checked: nothing to do</Original>
             <English>Time unchanged and no weather checked: nothing to do</English>
             <Chinesesimp>时间不变，也没有勾选天气，没有要过渡的内容</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvErrorSkipHours">
-            <Original>前进小时数要在 0-240 之间，例如 2.5 或 2:30</Original>
+            <Original>Hours to skip must be 0-240, e.g. 2.5 or 2:30</Original>
             <English>Hours to skip must be 0-240, e.g. 2.5 or 2:30</English>
             <Chinesesimp>前进小时数要在 0-240 之间，例如 2.5 或 2:30</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvErrorTargetTime">
-            <Original>目标时间格式不对，例如 18:30</Original>
+            <Original>Invalid target time, e.g. 18:30</Original>
             <English>Invalid target time, e.g. 18:30</English>
             <Chinesesimp>目标时间格式不对，例如 18:30</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvErrorWeather">
-            <Original>「%1」要在 0-1 之间</Original>
+            <Original>"%1" must be between 0 and 1</Original>
             <English>"%1" must be between 0 and 1</English>
             <Chinesesimp>「%1」要在 0-1 之间</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvFog">
-            <Original>雾</Original>
+            <Original>Fog</Original>
             <English>Fog</English>
             <Chinesesimp>雾</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvHint">
-            <Original>服务器和每位玩家的机器同时一点点推进时间，太阳和阴影平滑移动，不会突然跳变。勾选的天气用同一条时间轴渐变，所以&lt;t color='#ffd966'&gt;云的变化在跳过几个小时的过渡里最明显&lt;/t&gt;；只改天气时云量变化会慢一些。&lt;br/&gt;需要服务器也加载 ZEN。云量低时引擎可能不下雨。</Original>
+            <Original>The server and every player's machine advance the time in small steps together, so the sun and shadows move smoothly instead of jumping. Checked weather items change on the same timeline, so &lt;t color='#ffd966'&gt;cloud changes show best when the transition skips a few hours&lt;/t&gt;; weather-only changes to clouds are slower.&lt;br/&gt;The server must also run ZEN. The engine may not rain under low cloud cover.</Original>
             <English>The server and every player's machine advance the time in small steps together, so the sun and shadows move smoothly instead of jumping. Checked weather items change on the same timeline, so &lt;t color='#ffd966'&gt;cloud changes show best when the transition skips a few hours&lt;/t&gt;; weather-only changes to clouds are slower.&lt;br/&gt;The server must also run ZEN. The engine may not rain under low cloud cover.</English>
             <Chinesesimp>服务器和每位玩家的机器同时一点点推进时间，太阳和阴影平滑移动，不会突然跳变。勾选的天气用同一条时间轴渐变，所以&lt;t color='#ffd966'&gt;云的变化在跳过几个小时的过渡里最明显&lt;/t&gt;；只改天气时云量变化会慢一些。&lt;br/&gt;需要服务器也加载 ZEN。云量低时引擎可能不下雨。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvLightnings">
-            <Original>闪电</Original>
+            <Original>Lightning</Original>
             <English>Lightning</English>
             <Chinesesimp>闪电</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvMidnight">
-            <Original>午夜</Original>
+            <Original>Midnight</Original>
             <English>Midnight</English>
             <Chinesesimp>午夜</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvModeSkip">
-            <Original>前进时长</Original>
+            <Original>Skip ahead</Original>
             <English>Skip ahead</English>
             <Chinesesimp>前进时长</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvModeSkipTooltip">
-            <Original>往后走「前进(小时)」里填的时长，可以超过 24 小时。</Original>
+            <Original>Move forward by the number of hours entered; can be more than 24.</Original>
             <English>Move forward by the number of hours entered; can be more than 24.</English>
             <Chinesesimp>往后走「前进(小时)」里填的时长，可以超过 24 小时。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvModeTarget">
-            <Original>到指定时间</Original>
+            <Original>To time of day</Original>
             <English>To time of day</English>
             <Chinesesimp>到指定时间</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvModeTargetTooltip">
-            <Original>往后走到下一次出现「目标时间」的时刻（不会倒退）。</Original>
+            <Original>Move forward to the next occurrence of the target time (never backwards).</Original>
             <English>Move forward to the next occurrence of the target time (never backwards).</English>
             <Chinesesimp>往后走到下一次出现「目标时间」的时刻（不会倒退）。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvModuleCategory">
-            <Original>时间天气</Original>
+            <Original>Time &amp; weather</Original>
             <English>Time &amp; weather</English>
             <Chinesesimp>时间天气</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvModuleName">
-            <Original>时间 / 天气过渡</Original>
+            <Original>Time / weather transition</Original>
             <English>Time / weather transition</English>
             <Chinesesimp>时间 / 天气过渡</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvNoSunriseSunset">
-            <Original>今天是极昼或极夜，没有日出日落</Original>
+            <Original>Polar day or night: no sunrise / sunset today</Original>
             <English>Polar day or night: no sunrise / sunset today</English>
             <Chinesesimp>今天是极昼或极夜，没有日出日落</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvNoon">
-            <Original>正午</Original>
+            <Original>Noon</Original>
             <English>Noon</English>
             <Chinesesimp>正午</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvOvercast">
-            <Original>云量</Original>
+            <Original>Clouds</Original>
             <English>Clouds</English>
             <Chinesesimp>云量</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPresetClear">
-            <Original>晴朗</Original>
+            <Original>Clear</Original>
             <English>Clear</English>
             <Chinesesimp>晴朗</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPresetCloudy">
-            <Original>多云</Original>
+            <Original>Cloudy</Original>
             <English>Cloudy</English>
             <Chinesesimp>多云</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPresetFog">
-            <Original>晨雾</Original>
+            <Original>Morning fog</Original>
             <English>Morning fog</English>
             <Chinesesimp>晨雾</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPresetOvercast">
-            <Original>阴天</Original>
+            <Original>Overcast</Original>
             <English>Overcast</English>
             <Chinesesimp>阴天</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPresetRain">
-            <Original>下雨</Original>
+            <Original>Rain</Original>
             <English>Rain</English>
             <Chinesesimp>下雨</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPresetStorm">
-            <Original>暴风雨</Original>
+            <Original>Storm</Original>
             <English>Storm</English>
             <Chinesesimp>暴风雨</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPreview">
-            <Original>%1 → %2（+%3，%4 秒）</Original>
+            <Original>%1 → %2 (+%3 over %4 s)</Original>
             <English>%1 → %2 (+%3 over %4 s)</English>
             <Chinesesimp>%1 → %2（+%3，%4 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvPreviewWeatherOnly">
-            <Original>只改天气（%1 秒）</Original>
+            <Original>Weather only (%1 s)</Original>
             <English>Weather only (%1 s)</English>
             <Chinesesimp>只改天气（%1 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvProgress">
-            <Original>过渡中 %1%</Original>
+            <Original>transitioning %1%</Original>
             <English>transitioning %1%</English>
             <Chinesesimp>过渡中 %1%</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvRain">
-            <Original>雨</Original>
+            <Original>Rain</Original>
             <English>Rain</English>
             <Chinesesimp>雨</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvReadWeather">
-            <Original>读取当前</Original>
+            <Original>Read current</Original>
             <English>Read current</English>
             <Chinesesimp>读取当前</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvReadWeatherTooltip">
-            <Original>把现在的天气值填进下面的输入框（不改变勾选）。</Original>
+            <Original>Fill the boxes below with the current weather values (checkboxes unchanged).</Original>
             <English>Fill the boxes below with the current weather values (checkboxes unchanged).</English>
             <Chinesesimp>把现在的天气值填进下面的输入框（不改变勾选）。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvSkipHours">
-            <Original>前进(小时)</Original>
+            <Original>Skip (hours)</Original>
             <English>Skip (hours)</English>
             <Chinesesimp>前进(小时)</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvSkipHoursTooltip">
-            <Original>例如 2.5 或 2:30，最多 240。填 0 只改天气。</Original>
+            <Original>e.g. 2.5 or 2:30, at most 240. 0 = weather only.</Original>
             <English>e.g. 2.5 or 2:30, at most 240. 0 = weather only.</English>
             <Chinesesimp>例如 2.5 或 2:30，最多 240。填 0 只改天气。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStart">
-            <Original>开始过渡</Original>
+            <Original>Start transition</Original>
             <English>Start transition</English>
             <Chinesesimp>开始过渡</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStartTooltip">
-            <Original>发给所有人（包括服务器）。正在进行的过渡会被新的取代。</Original>
+            <Original>Sent to everyone, including the server. A transition already running is replaced.</Original>
             <English>Sent to everyone, including the server. A transition already running is replaced.</English>
             <Chinesesimp>发给所有人（包括服务器）。正在进行的过渡会被新的取代。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStatusReadWeather">
-            <Original>已读取当前天气</Original>
+            <Original>Current weather read</Original>
             <English>Current weather read</English>
             <Chinesesimp>已读取当前天气</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStatusStarted">
-            <Original>开始过渡到 %1（%2 秒）</Original>
+            <Original>Transitioning to %1 (%2 s)</Original>
             <English>Transitioning to %1 (%2 s)</English>
             <Chinesesimp>开始过渡到 %1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStatusStopped">
-            <Original>已停止过渡</Original>
+            <Original>Transition stopped</Original>
             <English>Transition stopped</English>
             <Chinesesimp>已停止过渡</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStatusWeatherOnly">
-            <Original>开始天气过渡（%1 秒）</Original>
+            <Original>Weather transition started (%1 s)</Original>
             <English>Weather transition started (%1 s)</English>
             <Chinesesimp>开始天气过渡（%1 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStatusWithWeather">
-            <Original>，天气一起渐变</Original>
+            <Original>, weather follows</Original>
             <English>, weather follows</English>
             <Chinesesimp>，天气一起渐变</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStop">
-            <Original>停止过渡</Original>
+            <Original>Stop transition</Original>
             <English>Stop transition</English>
             <Chinesesimp>停止过渡</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvStopTooltip">
-            <Original>时间和天气停在现在的样子。</Original>
+            <Original>Time and weather stay where they are now.</Original>
             <English>Time and weather stay where they are now.</English>
             <Chinesesimp>时间和天气停在现在的样子。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvSunrise">
-            <Original>日出</Original>
+            <Original>Sunrise</Original>
             <English>Sunrise</English>
             <Chinesesimp>日出</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvSunriseTooltip">
-            <Original>按当前地图的纬度和日期计算的日出时间。</Original>
+            <Original>Sunrise time for this map's latitude and today's date.</Original>
             <English>Sunrise time for this map's latitude and today's date.</English>
             <Chinesesimp>按当前地图的纬度和日期计算的日出时间。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvSunset">
-            <Original>日落</Original>
+            <Original>Sunset</Original>
             <English>Sunset</English>
             <Chinesesimp>日落</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvSunsetTooltip">
-            <Original>按当前地图的纬度和日期计算的日落时间。</Original>
+            <Original>Sunset time for this map's latitude and today's date.</Original>
             <English>Sunset time for this map's latitude and today's date.</English>
             <Chinesesimp>按当前地图的纬度和日期计算的日落时间。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvTargetTime">
-            <Original>目标时间</Original>
+            <Original>Target</Original>
             <English>Target</English>
             <Chinesesimp>目标时间</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvTargetTimeTooltip">
-            <Original>24 小时制，例如 18:30 或 6（半角冒号）。和现在相同时只改天气。</Original>
+            <Original>24-hour clock, e.g. 18:30 or 6. If it equals the current time, only the weather changes.</Original>
             <English>24-hour clock, e.g. 18:30 or 6. If it equals the current time, only the weather changes.</English>
             <Chinesesimp>24 小时制，例如 18:30 或 6（半角冒号）。和现在相同时只改天气。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvTitle">
-            <Original>时间 / 天气过渡</Original>
+            <Original>Time / weather transition</Original>
             <English>Time / weather transition</English>
             <Chinesesimp>时间 / 天气过渡</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWaves">
-            <Original>海浪</Original>
+            <Original>Waves</Original>
             <English>Waves</English>
             <Chinesesimp>海浪</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWeatherCheckTooltip">
-            <Original>勾选后这一项参与过渡。</Original>
+            <Original>Check to include this item in the transition.</Original>
             <English>Check to include this item in the transition.</English>
             <Chinesesimp>勾选后这一项参与过渡。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWeatherPreset">
-            <Original>预设</Original>
+            <Original>Preset</Original>
             <English>Preset</English>
             <Chinesesimp>预设</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWeatherPresetPick">
-            <Original>选择预设…</Original>
+            <Original>Pick a preset…</Original>
             <English>Pick a preset…</English>
             <Chinesesimp>选择预设…</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWeatherPresetTooltip">
-            <Original>选一个预设会填好并勾选全部天气项，之后还可以再改。</Original>
+            <Original>Picking a preset fills in and checks every weather item; you can still edit them.</Original>
             <English>Picking a preset fills in and checks every weather item; you can still edit them.</English>
             <Chinesesimp>选一个预设会填好并勾选全部天气项，之后还可以再改。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWeatherTitle">
-            <Original>天气（跟着时间轴一起渐变）</Original>
+            <Original>Weather (follows the timeline)</Original>
             <English>Weather (follows the timeline)</English>
             <Chinesesimp>天气（跟着时间轴一起渐变）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWeatherTitleTooltip">
-            <Original>勾选的项会在这次过渡里和时间一起渐变，过渡结束时正好到达目标值。没勾选的项不变。</Original>
+            <Original>Checked items change together with the time and reach their target exactly when the transition ends. Unchecked items stay as they are.</Original>
             <English>Checked items change together with the time and reach their target exactly when the transition ends. Unchecked items stay as they are.</English>
             <Chinesesimp>勾选的项会在这次过渡里和时间一起渐变，过渡结束时正好到达目标值。没勾选的项不变。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWeatherValueTooltip">
-            <Original>目标值 0-1。</Original>
+            <Original>Target value 0-1.</Original>
             <English>Target value 0-1.</English>
             <Chinesesimp>目标值 0-1。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_EnvWind">
-            <Original>风力</Original>
+            <Original>Wind</Original>
             <English>Wind</English>
             <Chinesesimp>风力</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeApply">
-            <Original>淡变到目标音量</Original>
+            <Original>Fade to volume</Original>
             <English>Fade to volume</English>
             <Chinesesimp>淡变到目标音量</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeApplyTooltip">
-            <Original>发给「播放对象」：不换歌，在「淡变时长」内把音量调到「目标音量」</Original>
+            <Original>Send to the target: keep the track, fade the volume to the target volume over the fade time</Original>
             <English>Send to the target: keep the track, fade the volume to the target volume over the fade time</English>
             <Chinesesimp>发给「播放对象」：不换歌，在「淡变时长」内把音量调到「目标音量」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeInPlay">
-            <Original>淡入播放</Original>
+            <Original>Fade in</Original>
             <English>Fade in</English>
             <Chinesesimp>淡入播放</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeInPlayTooltip">
-            <Original>发给「播放对象」：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Original>
+            <Original>Send to the target: volume to 0 -&gt; play -&gt; fade to the target volume over the fade time</Original>
             <English>Send to the target: volume to 0 -&gt; play -&gt; fade to the target volume over the fade time</English>
             <Chinesesimp>发给「播放对象」：音量归零 → 播放 → 在「淡变时长」内淡入到「目标音量」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeOutStop">
-            <Original>淡出停止</Original>
+            <Original>Fade out</Original>
             <English>Fade out</English>
             <Chinesesimp>淡出停止</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeOutStopTooltip">
-            <Original>发给「播放对象」：在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Original>
+            <Original>Send to the target: fade to 0 over the fade time, then stop and restore the volume</Original>
             <English>Send to the target: fade to 0 over the fade time, then stop and restore the volume</English>
             <Chinesesimp>发给「播放对象」：在「淡变时长」内淡出到 0，然后停止，并把音量复位到「目标音量」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeTime">
-            <Original>淡变时长(秒)</Original>
+            <Original>Fade time (s)</Original>
             <English>Fade time (s)</English>
             <Chinesesimp>淡变时长(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FadeTimeTooltip">
-            <Original>淡入 / 淡出 / 淡变的时长，单位秒（0 - 600）</Original>
+            <Original>Duration of fade in / fade out / volume fade, in seconds (0 - 600)</Original>
             <English>Duration of fade in / fade out / volume fade, in seconds (0 - 600)</English>
             <Chinesesimp>淡入 / 淡出 / 淡变的时长，单位秒（0 - 600）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_FilterGroupTooltip">
-            <Original>只在「收藏」页签可用。选中某个分组后可点「删除分组」</Original>
+            <Original>Favorites tab only. Pick a group here, then click "Delete group" to remove it.</Original>
             <English>Favorites tab only. Pick a group here, then click "Delete group" to remove it.</English>
             <Chinesesimp>只在「收藏」页签可用。选中某个分组后可点「删除分组」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Group">
-            <Original>分组</Original>
+            <Original>Group</Original>
             <English>Group</English>
             <Chinesesimp>分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_GroupAmbient">
-            <Original>氛围</Original>
+            <Original>Ambient</Original>
             <English>Ambient</English>
             <Chinesesimp>氛围</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_GroupCombat">
-            <Original>战斗</Original>
+            <Original>Combat</Original>
             <English>Combat</English>
             <Chinesesimp>战斗</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_GroupEnding">
-            <Original>结尾</Original>
+            <Original>Ending</Original>
             <English>Ending</English>
             <Chinesesimp>结尾</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_GroupStealth">
-            <Original>潜入</Original>
+            <Original>Stealth</Original>
             <English>Stealth</English>
             <Chinesesimp>潜入</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_GroupTooltip">
-            <Original>已收藏曲目：选择后立即修改分组；未收藏曲目：点「收藏」时放入该分组</Original>
+            <Original>Favorited track: changes its group immediately. Not favorited: used when you click "Favorite".</Original>
             <English>Favorited track: changes its group immediately. Not favorited: used when you click "Favorite".</English>
             <Chinesesimp>已收藏曲目：选择后立即修改分组；未收藏曲目：点「收藏」时放入该分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_HintMusicVolume">
-            <Original>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。试听只在你本机播放。</Original>
+            <Original>&lt;t color='#ffcc66'&gt;Note:&lt;/t&gt; playMusic is affected by each player's own Options → Audio → Music volume; players with music volume 0 hear nothing. Preview is local only.</Original>
             <English>&lt;t color='#ffcc66'&gt;Note:&lt;/t&gt; playMusic is affected by each player's own Options → Audio → Music volume; players with music volume 0 hear nothing. Preview is local only.</English>
             <Chinesesimp>&lt;t color='#ffcc66'&gt;提示：&lt;/t&gt;playMusic 受每位玩家「设置 → 音频 → 音乐」音量影响，音乐音量为 0 的玩家听不到。试听只在你本机播放。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_IncludeSelf">
-            <Original>我自己也听</Original>
+            <Original>I listen too</Original>
             <English>I listen too</English>
             <Chinesesimp>我自己也听</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_IncludeSelfTooltip">
-            <Original>勾选后，即使你不在播放对象里，你自己也会听到（方便监听）</Original>
+            <Original>When checked, you also hear it even if you are not in the target (for monitoring)</Original>
             <English>When checked, you also hear it even if you are not in the target (for monitoring)</English>
             <Chinesesimp>勾选后，即使你不在播放对象里，你自己也会听到（方便监听）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_InfoFormat">
-            <Original>选中：%1  [%2]  来源：%3</Original>
+            <Original>Selected: %1  [%2]  from: %3</Original>
             <English>Selected: %1  [%2]  from: %3</English>
             <Chinesesimp>选中：%1  [%2]  来源：%3</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_InfoNotLoaded">
-            <Original>%1：当前服务器未加载该曲目所在的模组</Original>
+            <Original>%1: the mod containing this track is not loaded here</Original>
             <English>%1: the mod containing this track is not loaded here</English>
             <Chinesesimp>%1：当前服务器未加载该曲目所在的模组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_KeybindOpen">
-            <Original>打开音乐播放器</Original>
+            <Original>Open Music Player</Original>
             <English>Open Music Player</English>
             <Chinesesimp>打开音乐播放器</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_KeybindOpenEnv">
-            <Original>打开时间 / 天气过渡</Original>
+            <Original>Open time / weather transition</Original>
             <English>Open time / weather transition</English>
             <Chinesesimp>打开时间 / 天气过渡</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_KeybindOpenEnvTooltip">
-            <Original>只有当前是 Zeus（curator）时才能打开。</Original>
+            <Original>Only works while you are a Zeus (curator).</Original>
             <English>Only works while you are a Zeus (curator).</English>
             <Chinesesimp>只有当前是 Zeus（curator）时才能打开。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_KeybindOpenTooltip">
-            <Original>仅当你是 Zeus（curator）时有效</Original>
+            <Original>Only works while you are a Zeus (curator)</Original>
             <English>Only works while you are a Zeus (curator)</English>
             <Chinesesimp>仅当你是 Zeus（curator）时有效</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_LoopEndTooltip">
-            <Original>B 点（秒）：AB 循环播到这里就跳回 A 点。普通播放不用填。</Original>
+            <Original>Point B (seconds): the AB loop jumps back to A here. Not needed for normal playback.</Original>
             <English>Point B (seconds): the AB loop jumps back to A here. Not needed for normal playback.</English>
             <Chinesesimp>B 点（秒）：AB 循环播到这里就跳回 A 点。普通播放不用填。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_ModuleCategory">
-            <Original>音乐</Original>
+            <Original>Music</Original>
             <English>Music</English>
             <Chinesesimp>音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_ModuleName">
-            <Original>音乐播放器</Original>
+            <Original>Music Player</Original>
             <English>Music Player</English>
             <Chinesesimp>音乐播放器</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NewGroupTooltip">
-            <Original>输入新分组名，然后点「添加分组」</Original>
+            <Original>Type a new group name, then click "Add group".</Original>
             <English>Type a new group name, then click "Add group".</English>
             <Chinesesimp>输入新分组名，然后点「添加分组」</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NoSelection">
-            <Original>未选择曲目</Original>
+            <Original>No track selected</Original>
             <English>No track selected</English>
             <Chinesesimp>未选择曲目</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NotCurator">
-            <Original>[Zeus 音乐播放器] 只有 Zeus（curator）才能打开音乐播放器。</Original>
+            <Original>[Zeus Music Player] Only a Zeus (curator) can open the music player.</Original>
             <English>[Zeus Music Player] Only a Zeus (curator) can open the music player.</English>
             <Chinesesimp>[Zeus 音乐播放器] 只有 Zeus（curator）才能打开音乐播放器。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NotLoaded">
-            <Original>（未加载）</Original>
+            <Original>(not loaded)</Original>
             <English>(not loaded)</English>
             <Chinesesimp>（未加载）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Note">
-            <Original>备注</Original>
+            <Original>Note</Original>
             <English>Note</English>
             <Chinesesimp>备注</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NoteTooltip">
-            <Original>曲目备注名，回车或点「保存备注」保存（未收藏的曲目会自动加入收藏）</Original>
+            <Original>Custom note / alias. Press Enter or "Save note" (adds the track to favorites if needed).</Original>
             <English>Custom note / alias. Press Enter or "Save note" (adds the track to favorites if needed).</English>
             <Chinesesimp>曲目备注名，回车或点「保存备注」保存（未收藏的曲目会自动加入收藏）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NowPlayingFormat">
-            <Original>正在播放：%1  [%2]  ·  %3  ·  %4 / %5</Original>
+            <Original>Now playing: %1  [%2]  ·  %3  ·  %4 / %5</Original>
             <English>Now playing: %1  [%2]  ·  %3  ·  %4 / %5</English>
             <Chinesesimp>正在播放：%1  [%2]  ·  %3  ·  %4 / %5</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NowPlayingLoop">
-            <Original>·  AB 循环 %1 – %2</Original>
+            <Original>·  A-B loop %1 – %2</Original>
             <English>·  A-B loop %1 – %2</English>
             <Chinesesimp>·  AB 循环 %1 – %2</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_NowPlayingNone">
-            <Original>正在播放：（无）</Original>
+            <Original>Now playing: (nothing)</Original>
             <English>Now playing: (nothing)</English>
             <Chinesesimp>正在播放：（无）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_PlayAll">
-            <Original>播放</Original>
+            <Original>Play</Original>
             <English>Play</English>
             <Chinesesimp>播放</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_PlayAllTooltip">
-            <Original>发给「播放对象」：播放选中的曲目。播放前会把对方的音乐音量设为「目标音量」。</Original>
+            <Original>Send to the target: play the selected track. Music volume is first set to the target volume.</Original>
             <English>Send to the target: play the selected track. Music volume is first set to the target volume.</English>
             <Chinesesimp>发给「播放对象」：播放选中的曲目。播放前会把对方的音乐音量设为「目标音量」。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Preview">
-            <Original>试听</Original>
+            <Original>Preview</Original>
             <English>Preview</English>
             <Chinesesimp>试听</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_PreviewStop">
-            <Original>停止试听</Original>
+            <Original>Stop preview</Original>
             <English>Stop preview</English>
             <Chinesesimp>停止试听</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_PreviewTooltip">
-            <Original>只在你本机 playMusic，其他玩家听不到（双击列表也可试听）。会暂时替换你本机正在听的全队音乐。</Original>
+            <Original>Plays only on your machine (local playMusic); nobody else hears it. Double-click a row to preview too. Replaces the music you currently hear.</Original>
             <English>Plays only on your machine (local playMusic); nobody else hears it. Double-click a row to preview too. Replaces the music you currently hear.</English>
             <Chinesesimp>只在你本机 playMusic，其他玩家听不到（双击列表也可试听）。会暂时替换你本机正在听的全队音乐。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckAllowed">
-            <Original>远程执行自检通过：%1 中 Commands mode = %2（允许远程命令）</Original>
+            <Original>RemoteExec check OK: %1 Commands mode = %2 (commands allowed)</Original>
             <English>RemoteExec check OK: %1 Commands mode = %2 (commands allowed)</English>
             <Chinesesimp>远程执行自检通过：%1 中 Commands mode = %2（允许远程命令）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckBlocked">
-            <Original>【警告】全队播放可能被服务器拦截！%1 中 Commands mode = 0（禁止所有远程命令）</Original>
+            <Original>[WARNING] Playing for all may be blocked by the server! %1 Commands mode = 0 (all remote commands blocked)</Original>
             <English>[WARNING] Playing for all may be blocked by the server! %1 Commands mode = 0 (all remote commands blocked)</English>
             <Chinesesimp>【警告】全队播放可能被服务器拦截！%1 中 Commands mode = 0（禁止所有远程命令）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckLimits">
-            <Original>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，把 ESC → 选项 → 插件设置 → Zeus Music Player 的「全队播放方式」改回「ZEN 事件」。</Original>
+            <Original>Only configs visible on your machine can be checked (mission description.ext and locally loaded mods).\nServer-only mods and BattlEye remoteexec.txt filters cannot be detected.\nIf nobody hears the music, set Broadcast method back to "ZEN event" in ESC → Options → Addon Options → Zeus Music Player.</Original>
             <English>Only configs visible on your machine can be checked (mission description.ext and locally loaded mods).\nServer-only mods and BattlEye remoteexec.txt filters cannot be detected.\nIf nobody hears the music, set Broadcast method back to "ZEN event" in ESC → Options → Addon Options → Zeus Music Player.</English>
             <Chinesesimp>只能检查本机可见的配置：任务 description.ext 与本机加载的模组。\n服务器专用模组里的 CfgRemoteExec、BattlEye remoteexec.txt 过滤无法检测。\n如果全队听不到，把 ESC → 选项 → 插件设置 → Zeus Music Player 的「全队播放方式」改回「ZEN 事件」。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckNotDefined">
-            <Original>远程执行自检通过：未定义 CfgRemoteExec（默认允许），全队播放可用</Original>
+            <Original>RemoteExec check OK: no CfgRemoteExec defined (allowed by default)</Original>
             <English>RemoteExec check OK: no CfgRemoteExec defined (allowed by default)</English>
             <Chinesesimp>远程执行自检通过：未定义 CfgRemoteExec（默认允许），全队播放可用</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckWarnShort">
-            <Original>注意：全队播放可能被服务器拦截</Original>
+            <Original>Warning: playing for all may be blocked</Original>
             <English>Warning: playing for all may be blocked</English>
             <Chinesesimp>注意：全队播放可能被服务器拦截</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckWhitelistMissing">
-            <Original>【警告】全队播放可能被服务器拦截！%1 为白名单模式 (mode = 1)，缺少：%2</Original>
+            <Original>[WARNING] Playing for all may be blocked by the server! %1 is in whitelist mode (mode = 1) and is missing: %2</Original>
             <English>[WARNING] Playing for all may be blocked by the server! %1 is in whitelist mode (mode = 1) and is missing: %2</English>
             <Chinesesimp>【警告】全队播放可能被服务器拦截！%1 为白名单模式 (mode = 1)，缺少：%2</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckWhitelistOk">
-            <Original>远程执行自检通过：%1 为白名单模式，已包含 playMusic / fadeMusic</Original>
+            <Original>RemoteExec check OK: %1 is in whitelist mode and contains playMusic / fadeMusic</Original>
             <English>RemoteExec check OK: %1 is in whitelist mode and contains playMusic / fadeMusic</English>
             <Chinesesimp>远程执行自检通过：%1 为白名单模式，已包含 playMusic / fadeMusic</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckZenEvent">
-            <Original>全队播放走 ZEN 事件通道，不受 CfgRemoteExec 白名单限制</Original>
+            <Original>Broadcasting through ZEN events; not affected by the CfgRemoteExec whitelist</Original>
             <English>Broadcasting through ZEN events; not affected by the CfgRemoteExec whitelist</English>
             <Chinesesimp>全队播放走 ZEN 事件通道，不受 CfgRemoteExec 白名单限制</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RECheckZenEventTooltip">
-            <Original>播放命令通过 ZEN 的 zen_common_execute 事件发给所有玩家，和 ZEN 自己的模块用的是同一条通道。\n可以在 ESC → 选项 → 插件设置 → Zeus Music Player 里切换成 remoteExec 方式。</Original>
+            <Original>Commands are sent to every player through ZEN's zen_common_execute event, the same channel ZEN's own modules use.\nYou can switch to remoteExec in ESC → Options → Addon Options → Zeus Music Player.</Original>
             <English>Commands are sent to every player through ZEN's zen_common_execute event, the same channel ZEN's own modules use.\nYou can switch to remoteExec in ESC → Options → Addon Options → Zeus Music Player.</English>
             <Chinesesimp>播放命令通过 ZEN 的 zen_common_execute 事件发给所有玩家，和 ZEN 自己的模块用的是同一条通道。\n可以在 ESC → 选项 → 插件设置 → Zeus Music Player 里切换成 remoteExec 方式。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_RemoveFavorite">
-            <Original>取消收藏</Original>
+            <Original>Unfavorite</Original>
             <English>Unfavorite</English>
             <Chinesesimp>取消收藏</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SaveNote">
-            <Original>保存备注</Original>
+            <Original>Save note</Original>
             <English>Save note</English>
             <Chinesesimp>保存备注</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Search">
-            <Original>搜索</Original>
+            <Original>Search</Original>
             <English>Search</English>
             <Chinesesimp>搜索</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SearchTooltip">
-            <Original>按名称 / 类名 / musicClass / 来源模组 / 分组 / 备注搜索，空格分隔多个关键字</Original>
+            <Original>Search by name / class / musicClass / source mod / group / note. Separate keywords with spaces.</Original>
             <English>Search by name / class / musicClass / source mod / group / note. Separate keywords with spaces.</English>
             <Chinesesimp>按名称 / 类名 / musicClass / 来源模组 / 分组 / 备注搜索，空格分隔多个关键字</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SelectFirst">
-            <Original>请先在列表中选择一首曲目</Original>
+            <Original>Select a track in the list first</Original>
             <English>Select a track in the list first</English>
             <Chinesesimp>请先在列表中选择一首曲目</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SetATooltip">
-            <Original>把当前播放进度填为 A 点。\n先试听，听到合适的位置时点一下。</Original>
+            <Original>Set point A to the current playback position.\nPreview first, then click at the right moment.</Original>
             <English>Set point A to the current playback position.\nPreview first, then click at the right moment.</English>
             <Chinesesimp>把当前播放进度填为 A 点。\n先试听，听到合适的位置时点一下。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SetBTooltip">
-            <Original>把当前播放进度填为 B 点。\n先试听，听到合适的位置时点一下。</Original>
+            <Original>Set point B to the current playback position.\nPreview first, then click at the right moment.</Original>
             <English>Set point B to the current playback position.\nPreview first, then click at the right moment.</English>
             <Chinesesimp>把当前播放进度填为 B 点。\n先试听，听到合适的位置时点一下。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SettingTransport">
-            <Original>全队播放方式</Original>
+            <Original>Broadcast method</Original>
             <English>Broadcast method</English>
             <Chinesesimp>全队播放方式</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SettingTransportTooltip">
-            <Original>ZEN 事件（推荐）：通过所有玩家都装了的 ZEN 发送，不受服务器 CfgRemoteExec 白名单限制。\nremoteExec：直接 remoteExec 引擎命令 playMusic / fadeMusic，可能被服务器拦截。</Original>
+            <Original>ZEN event (recommended): sent through ZEN, which every player has; not affected by the server's CfgRemoteExec whitelist.\nremoteExec: remoteExec the engine commands playMusic / fadeMusic directly; may be blocked by the server.</Original>
             <English>ZEN event (recommended): sent through ZEN, which every player has; not affected by the server's CfgRemoteExec whitelist.\nremoteExec: remoteExec the engine commands playMusic / fadeMusic directly; may be blocked by the server.</English>
             <Chinesesimp>ZEN 事件（推荐）：通过所有玩家都装了的 ZEN 发送，不受服务器 CfgRemoteExec 白名单限制。\nremoteExec：直接 remoteExec 引擎命令 playMusic / fadeMusic，可能被服务器拦截。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SideCiv">
-            <Original>平民</Original>
+            <Original>Civilian</Original>
             <English>Civilian</English>
             <Chinesesimp>平民</Chinesesimp>
         </Key>
@@ -697,7 +697,7 @@
             <Chinesesimp>OPFOR</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SideGuer">
-            <Original>独立</Original>
+            <Original>Independent</Original>
             <English>Independent</English>
             <Chinesesimp>独立</Chinesesimp>
         </Key>
@@ -707,262 +707,262 @@
             <Chinesesimp>BLUFOR</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SourceGlobal">
-            <Original>发给：%1</Original>
+            <Original>to: %1</Original>
             <English>to: %1</English>
             <Chinesesimp>发给：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SourceOther">
-            <Original>其他来源（任务脚本 / 其他 Zeus）</Original>
+            <Original>other source (mission script / another Zeus)</Original>
             <English>other source (mission script / another Zeus)</English>
             <Chinesesimp>其他来源（任务脚本 / 其他 Zeus）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_SourcePreview">
-            <Original>仅本机试听</Original>
+            <Original>local preview</Original>
             <English>local preview</English>
             <Chinesesimp>仅本机试听</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StartAtTooltip">
-            <Original>A 点 / 起始位置（秒）。普通播放从这里开始（0 = 从头），AB 循环从这里开始循环。</Original>
+            <Original>Point A / start position (seconds). Normal playback starts here (0 = from the beginning); AB loop loops from here.</Original>
             <English>Point A / start position (seconds). Normal playback starts here (0 = from the beginning); AB loop loops from here.</English>
             <Chinesesimp>A 点 / 起始位置（秒）。普通播放从这里开始（0 = 从头），AB 循环从这里开始循环。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusABLoop">
-            <Original>向「%4」AB 循环：%1（%2 – %3）</Original>
+            <Original>A-B loop for "%4": %1 (%2 – %3)</Original>
             <English>A-B loop for "%4": %1 (%2 – %3)</English>
             <Chinesesimp>向「%4」AB 循环：%1（%2 – %3）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFade">
-            <Original>「%3」音量 → %1（%2 秒）</Original>
+            <Original>Volume for "%3" -&gt; %1 (%2 s)</Original>
             <English>Volume for "%3" -&gt; %1 (%2 s)</English>
             <Chinesesimp>「%3」音量 → %1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFadeIn">
-            <Original>向「%3」淡入播放：%1（%2 秒）</Original>
+            <Original>Fading in for "%3": %1 (%2 s)</Original>
             <English>Fading in for "%3": %1 (%2 s)</English>
             <Chinesesimp>向「%3」淡入播放：%1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFadeOut">
-            <Original>「%2」淡出中，%1 秒后停止</Original>
+            <Original>Fading out for "%2", stopping in %1 s</Original>
             <English>Fading out for "%2", stopping in %1 s</English>
             <Chinesesimp>「%2」淡出中，%1 秒后停止</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusFavorited">
-            <Original>已收藏：%1</Original>
+            <Original>Favorited: %1</Original>
             <English>Favorited: %1</English>
             <Chinesesimp>已收藏：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusGroupAdded">
-            <Original>已添加分组：%1</Original>
+            <Original>Group added: %1</Original>
             <English>Group added: %1</English>
             <Chinesesimp>已添加分组：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusGroupDeleted">
-            <Original>已删除分组：%1</Original>
+            <Original>Group deleted: %1</Original>
             <English>Group deleted: %1</English>
             <Chinesesimp>已删除分组：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusGroupEmpty">
-            <Original>请先输入分组名</Original>
+            <Original>Enter a group name first</Original>
             <English>Enter a group name first</English>
             <Chinesesimp>请先输入分组名</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusGroupExists">
-            <Original>分组已存在</Original>
+            <Original>Group already exists</Original>
             <English>Group already exists</English>
             <Chinesesimp>分组已存在</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusGroupPick">
-            <Original>请先在「收藏」页签的分组筛选中选择要删除的分组</Original>
+            <Original>Pick the group to delete in the group filter (Favorites tab) first</Original>
             <English>Pick the group to delete in the group filter (Favorites tab) first</English>
             <Chinesesimp>请先在「收藏」页签的分组筛选中选择要删除的分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusLoopInvalid">
-            <Original>B 点要比 A 点至少晚 1 秒</Original>
+            <Original>Point B must be at least 1 second after A</Original>
             <English>Point B must be at least 1 second after A</English>
             <Chinesesimp>B 点要比 A 点至少晚 1 秒</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusLoopTooLong">
-            <Original>B 点超过了曲目时长（%1）</Original>
+            <Original>Point B is past the end of the track (%1)</Original>
             <English>Point B is past the end of the track (%1)</English>
             <Chinesesimp>B 点超过了曲目时长（%1）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusNoCuratorSelection">
-            <Original>Zeus 界面里没有选中任何单位，先在 Zeus 里选中单位或小队</Original>
+            <Original>Nothing is selected in Zeus; select units or squads first</Original>
             <English>Nothing is selected in Zeus; select units or squads first</English>
             <Chinesesimp>Zeus 界面里没有选中任何单位，先在 Zeus 里选中单位或小队</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusNoPlayersSelected">
-            <Original>选中的单位里没有玩家</Original>
+            <Original>None of the selected units is a player</Original>
             <English>None of the selected units is a player</English>
             <Chinesesimp>选中的单位里没有玩家</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusNoPosition">
-            <Original>先试听或播放一首歌，再点 A / B 记录当前位置</Original>
+            <Original>Preview or play a track first, then click A / B to record the position</Original>
             <English>Preview or play a track first, then click A / B to record the position</English>
             <Chinesesimp>先试听或播放一首歌，再点 A / B 记录当前位置</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusNoteSaved">
-            <Original>备注已保存</Original>
+            <Original>Note saved</Original>
             <English>Note saved</English>
             <Chinesesimp>备注已保存</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusNoteSavedAdded">
-            <Original>备注已保存（已自动加入收藏）</Original>
+            <Original>Note saved (track added to favorites)</Original>
             <English>Note saved (track added to favorites)</English>
             <Chinesesimp>备注已保存（已自动加入收藏）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusPlayAll">
-            <Original>已向「%2」播放：%1</Original>
+            <Original>Playing for "%2": %1</Original>
             <English>Playing for "%2": %1</English>
             <Chinesesimp>已向「%2」播放：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusPreview">
-            <Original>试听（仅本机）：%1</Original>
+            <Original>Previewing (local only): %1</Original>
             <English>Previewing (local only): %1</English>
             <Chinesesimp>试听（仅本机）：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusPreviewStopped">
-            <Original>已停止本机音乐</Original>
+            <Original>Local music stopped</Original>
             <English>Local music stopped</English>
             <Chinesesimp>已停止本机音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusSetA">
-            <Original>A 点 = %1（%2 秒）</Original>
+            <Original>Point A = %1 (%2 s)</Original>
             <English>Point A = %1 (%2 s)</English>
             <Chinesesimp>A 点 = %1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusSetB">
-            <Original>B 点 = %1（%2 秒）</Original>
+            <Original>Point B = %1 (%2 s)</Original>
             <English>Point B = %1 (%2 s)</English>
             <Chinesesimp>B 点 = %1（%2 秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusStopAll">
-            <Original>已停止「%1」的音乐</Original>
+            <Original>Music stopped for "%1"</Original>
             <English>Music stopped for "%1"</English>
             <Chinesesimp>已停止「%1」的音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusTargetInvalid">
-            <Original>播放对象无效，请点「刷新」后重新选择</Original>
+            <Original>Invalid target; click Refresh and pick again</Original>
             <English>Invalid target; click Refresh and pick again</English>
             <Chinesesimp>播放对象无效，请点「刷新」后重新选择</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusTargetsRefreshed">
-            <Original>已刷新播放对象列表</Original>
+            <Original>Target list refreshed</Original>
             <English>Target list refreshed</English>
             <Chinesesimp>已刷新播放对象列表</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StatusUnfavorited">
-            <Original>已取消收藏：%1</Original>
+            <Original>Removed from favorites: %1</Original>
             <English>Removed from favorites: %1</English>
             <Chinesesimp>已取消收藏：%1</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StopAll">
-            <Original>停止</Original>
+            <Original>Stop</Original>
             <English>Stop</English>
             <Chinesesimp>停止</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_StopAllTooltip">
-            <Original>发给「播放对象」：立刻停止音乐</Original>
+            <Original>Send to the target: stop the music immediately</Original>
             <English>Send to the target: stop the music immediately</English>
             <Chinesesimp>发给「播放对象」：立刻停止音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TabAll">
-            <Original>全部</Original>
+            <Original>All</Original>
             <English>All</English>
             <Chinesesimp>全部</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TabFavorites">
-            <Original>收藏</Original>
+            <Original>Favorites</Original>
             <English>Favorites</English>
             <Chinesesimp>收藏</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Target">
-            <Original>播放对象</Original>
+            <Original>Play to</Original>
             <English>Play to</English>
             <Chinesesimp>播放对象</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetAll">
-            <Original>全体玩家</Original>
+            <Original>All players</Original>
             <English>All players</English>
             <Chinesesimp>全体玩家</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetGroup">
-            <Original>小队：%1 · %2 · %3 名玩家</Original>
+            <Original>Squad: %1 · %2 · %3 players</Original>
             <English>Squad: %1 · %2 · %3 players</English>
             <Chinesesimp>小队：%1 · %2 · %3 名玩家</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetRefresh">
-            <Original>刷新</Original>
+            <Original>Refresh</Original>
             <English>Refresh</English>
             <Chinesesimp>刷新</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetRefreshTooltip">
-            <Original>重新读取在线玩家和小队列表</Original>
+            <Original>Reload the list of players and squads</Original>
             <English>Reload the list of players and squads</English>
             <Chinesesimp>重新读取在线玩家和小队列表</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetSelectedGroups">
-            <Original>Zeus 选中的单位所在小队</Original>
+            <Original>Squads of units selected in Zeus</Original>
             <English>Squads of units selected in Zeus</English>
             <Chinesesimp>Zeus 选中的单位所在小队</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetSelectedGroupsLabel">
-            <Original>选中的 %1 个小队（%2 名玩家）</Original>
+            <Original>%1 selected squads (%2 players)</Original>
             <English>%1 selected squads (%2 players)</English>
             <Chinesesimp>选中的 %1 个小队（%2 名玩家）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetSelectedUnits">
-            <Original>Zeus 选中的单位</Original>
+            <Original>Units selected in Zeus</Original>
             <English>Units selected in Zeus</English>
             <Chinesesimp>Zeus 选中的单位</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetSelectedUnitsLabel">
-            <Original>选中的 %1 个单位（%2 名玩家）</Original>
+            <Original>%1 selected units (%2 players)</Original>
             <English>%1 selected units (%2 players)</English>
             <Chinesesimp>选中的 %1 个单位（%2 名玩家）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetSide">
-            <Original>阵营：%1（%2 名玩家）</Original>
+            <Original>Side: %1 (%2 players)</Original>
             <English>Side: %1 (%2 players)</English>
             <Chinesesimp>阵营：%1（%2 名玩家）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetTooltip">
-            <Original>「播放」「停止」「淡入」「淡出」「淡变」只发给这里选的人。\n选「Zeus 选中的…」时，用的是你在 Zeus 界面里当前选中的单位（点按钮那一刻读取）。</Original>
+            <Original>Play / Stop / Fade only go to the players chosen here.\n"Zeus selection" uses the units selected in the Zeus interface at the moment you click.</Original>
             <English>Play / Stop / Fade only go to the players chosen here.\n"Zeus selection" uses the units selected in the Zeus interface at the moment you click.</English>
             <Chinesesimp>「播放」「停止」「淡入」「淡出」「淡变」只发给这里选的人。\n选「Zeus 选中的…」时，用的是你在 Zeus 界面里当前选中的单位（点按钮那一刻读取）。</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TargetUnit">
-            <Original>玩家：%1 · %2</Original>
+            <Original>Player: %1 · %2</Original>
             <English>Player: %1 · %2</English>
             <Chinesesimp>玩家：%1 · %2</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Title">
-            <Original>Zeus 音乐播放器</Original>
+            <Original>Zeus Music Player</Original>
             <English>Zeus Music Player</English>
             <Chinesesimp>Zeus 音乐播放器</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TransportRemoteExec">
-            <Original>remoteExec 引擎命令</Original>
+            <Original>remoteExec engine commands</Original>
             <English>remoteExec engine commands</English>
             <Chinesesimp>remoteExec 引擎命令</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_TransportZen">
-            <Original>ZEN 事件（推荐）</Original>
+            <Original>ZEN event (recommended)</Original>
             <English>ZEN event (recommended)</English>
             <Chinesesimp>ZEN 事件（推荐）</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Ungrouped">
-            <Original>未分组</Original>
+            <Original>Ungrouped</Original>
             <English>Ungrouped</English>
             <Chinesesimp>未分组</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_Volume">
-            <Original>目标音量(0-1)</Original>
+            <Original>Volume (0-1)</Original>
             <English>Volume (0-1)</English>
             <Chinesesimp>目标音量(0-1)</Chinesesimp>
         </Key>
         <Key ID="STR_ZMP_VolumeTooltip">
-            <Original>0 = 静音，1 = 原始音量。最终音量还要乘以每位玩家自己的「音乐」音量设置。</Original>
+            <Original>0 = silent, 1 = full. Each player's own music volume setting still applies on top of this.</Original>
             <English>0 = silent, 1 = full. Each player's own music volume setting still applies on top of this.</English>
             <Chinesesimp>0 = 静音，1 = 原始音量。最终音量还要乘以每位玩家自己的「音乐」音量设置。</Chinesesimp>
         </Key>

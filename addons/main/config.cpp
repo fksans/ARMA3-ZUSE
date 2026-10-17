@@ -15,9 +15,9 @@ class CfgPatches {
             "zen_context_menu",
             "zen_custom_modules"
         };
-        version = QUOTE(MAJOR.MINOR.PATCH.BUILD);
-        versionStr = QUOTE(MAJOR.MINOR.PATCH.BUILD);
-        versionAr[] = {MAJOR, MINOR, PATCH, BUILD};
+        version = QUOTE(MAJOR.MINOR.PATCH);
+        versionStr = QUOTE(MAJOR.MINOR.PATCH);
+        versionAr[] = {MAJOR, MINOR, PATCH};
     };
 };
 
